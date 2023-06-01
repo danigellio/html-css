@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Modelo de Caixa</title>
+     <style>
+          h1{
+               background-color: lightgray;
+               height: 300px;
+               width: 300px;
+
+
+               /*PODEMOS SIMPLIFICAR SHORHAND*/
+
+               /*BORDER NA ORDER LARGURA ESTILO E COR*/    
+               /*border-width: 10px;
+               border-style: solid;
+               border-color: aquamarine;*/
+
+               border: 5px solid pink;
+
+               /*PADING NA ORDEM*/
+               /*padding-top: 10px;
+               padding-right: 10px;
+               padding-bottom: 10px;
+               padding-left: 10px;*/
+               
+               padding: 10px 10px 10px 10px;
+               /* SE FOR TODOS IGUAIS DIGITE SOMENTE PADDING:10PX; POIS SAO TODOS IGUAIS, ISSO VALE PRA MARGEM TBM, PODEMOS TBM POR SO 2 VALORES EX PADING 10PX 20 PX, O DE CIMA E DE BAIXO FICAM IGUAL 10PX CADA E OS LADOS FICAM IGUAIS COM 20PX*/
+
+
+               /*MARGEM NA ORDEM*/
+
+               /*margin-top: 10px;
+               margin-right: 10px;
+               margin-bottom: 10px;
+               margin-left: 10px;*/
+
+               /*margin:auto; para deixar a caixa no meio da tela*/
+               margin: 10px;
+               /*ou margim: 10px 20px 40 px 10px; */
+
+               outline-width: 5px
+                    
+          
+               /*sao traços dentro da margem*/
+               /*outline pouco usado, mas tem mesma logica, largura, estilo e cor */
+          }
+          a{
+               /*ele é por padrao inline-box, display:inline;*/
+               /*podemos por DISPLAY:BLOCK; ele fica um bloco igual o h1*/
+               border-width: 10px;
+               border-style: solid;
+               border-color: blue;
+          }
+     </style>
+</head>
+<body>
+     <h1>Exemplo de caixa box level</h1>
+     <p>Paragrafos também são exemplos de box-levelm mas os <a href="#">links sao exemplo de caixas de inline-level</a>Vamos ver como tudo isso funciona.</p>
+</body>
+</html>

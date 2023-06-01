@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Personalizando Links</title>
+     <style>
+       body{
+          font-family: Arial, Helvetica, sans-serif;
+       }
+       a:hover{
+          color: blueviolet;
+       }
+       a{
+          color: black;
+       }
+       a:visited{ /*quando vc ja visitou o site*/
+          color: violet;
+       }
+       a:active{ /*quando clica pra entrar no site muda de cor*/
+          color: aqua;
+
+       }
+       .especial::before{ /*before ANTES*/ /*.especial classe de a*/
+         content: '✉';
+       } 
+       a::after{ /*DEPOIS*/
+          content: '✓';	 
+          color: brown;
+       }
+     </style>
+</head>
+<body>
+     <h1>Personalizando Links</h1>
+     <ul>
+          <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositorio GitHub</a></li>
+          <li><a href="https://gustavoguanabara.github.io" target="_blank" class="especial">Youtube</a></li>
+          
+</body>
+</html>

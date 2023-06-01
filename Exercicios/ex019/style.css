@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;900&display=swap');
+body{
+     font-family: Arial, Helvetica, sans-serif;
+     background-color:#434E52;
+}
+main{
+     background-color: white;
+     padding: 10px;
+     width: 1250px;
+     margin: auto;
+}
+
+h1#principal{
+     color:#315669;
+     text-align: center;
+     background-color: #a6b4b7a6;
+     border-radius: 5px;
+     width: 650px;
+     margin: auto;
+     padding: 5px;
+     font-family: 'Comfortaa', cursive;
+     
+
+}
+h2{
+     color:#4d595e;
+     font-family: 'Comfortaa', cursive;
+}
+h1{
+     color: #15252e;
+     font-family: 'Inconsolata', monospace;
+     font-weight: 900;
+     
+    
+}
+p{
+     text-align: justify;
+     text-indent: 30px;
+}
+
+/*nao precisa por h2*/
+.basico{
+     background-color: #61afd669;
+     width: 250px;
+     border-radius: 5px;
+     padding: 3px;
+}
+.intermediario{
+     background-color: #26759c69;
+     width: 250px;
+     border-radius: 5px;
+     padding: 3px;
+}
+.avançado{
+     background-color: #1a3e5069;
+     width: 250px;
+     border-radius: 5px;
+     padding: 3px;
+}
+span{
+     background-color: rgb(202, 202, 89);
+}
