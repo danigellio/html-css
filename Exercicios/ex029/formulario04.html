@@ -8,22 +8,25 @@
 <body>
      <h1>Exemplos de Formulário</h1>
      <form action="cadastro.php" method="post" autocomplete="on">
-          <p>
-               <label for="inome">Nome:</label>
-               <input type="text" name="Nome" id="inome" required minlength="5" maxlength="20">
-          </p>
-          <p><label for="iemail">E-mail</label>
-               <input type="email" name="email" id="iemail" required autocomplete="email">
-          </p>
-          <p>
-               <label for="itelefone">Telefone</label>
-               <input type="tel" name="telefone" id="itelefone" pattern="^[0-9]{4}-[0-9]{4}$" placeholder="(xx)xxxx-xxxx"> <!-[0-9] significa numeros de 0 a 9... 
-               {4} significa 4 digitos, 
-               ^[0-9]{4}-[0-9]{4}$ 9999-9999
-               ^\d {4,5}-\d {4}$ 99999-9999                ^\d$ siginifica digitos,pode por só isso
-               ^\(\d{2}\)\d{4,5}-\d{4}$ (44)99999-9999
-          -->
-          </p>
+          <fieldset> <!--para agrupar-->
+               <legend>Dados do Usuário</legend>
+               <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="Nome" id="inome" required minlength="5" maxlength="20">
+               </p>
+               <p><label for="iemail">E-mail</label>
+                    <input type="email" name="email" id="iemail" required autocomplete="email">
+               </p>
+               <p>
+                    <label for="itelefone">Telefone</label>
+                    <input type="tel" name="telefone" id="itelefone" pattern="^[0-9]{4}-[0-9]{4}$" placeholder="(xx)xxxx-xxxx"> <!-[0-9] significa numeros de 0 a 9...
+                    {4} significa 4 digitos,
+                    ^[0-9]{4}-[0-9]{4}$ 9999-9999
+                    ^\d {4,5}-\d {4}$ 99999-9999                ^\d$ siginifica digitos,pode por só isso
+                    ^\(\d{2}\)\d{4,5}-\d{4}$ (44)99999-9999
+               -->
+               </p>
+          </fieldset>
           <!--Estudar mai sobre RegEx-->
           <p>
                <input type="submit" value="Enviar">
