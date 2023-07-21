@@ -10,9 +10,9 @@ html,body{
      width: 100vw;
      height: 100vh;
      background-color: #233eff;
-     background-size: contain;
-     background-repeat: no-repeat;
-     
+     background-size: contain; /*para ficar do tamanho do contain*/
+     background-repeat: no-repeat; /*para nao repetir a img*/
+
 }
 h1{
      color: white;
