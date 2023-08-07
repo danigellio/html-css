@@ -3,16 +3,17 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+     <!-- site do google icons-->
      <link rel="stylesheet" href="estilo/style.css">
+     <link rel="stylesheet" href="estilo/media-query.css">
      <title>Media Query</title>
      
 </head>
-<body>
+<body onresize="mudouTamanho()"> <!--quando mudar o tamanho do site ex celular tablet etc..-->
      <header>
           <h1>Meu site</h1>
-          <span id="burguer" class="material-symbols-outlined" onclick="clickmenu()">
-               menu </span>
+          <span id="burguer" class="material-symbols-outlined" onclick="clickmenu()"> <!-- colocar id e tbm o onclick-->menu </span>
           <menu id="itens">
                <ul>
                     <li><a href="#">Opção 1</a></li>
@@ -21,7 +22,7 @@
                     <li><a href="#">Opção 4</a></li>
                     <li><a href="#">Opção 5</a></li>
                </ul>
-          </menu>
+          </menu>   
      </header>
      <main>
           <article>
@@ -40,6 +41,13 @@
                     itens.style.display='block'
                }
               
+          }
+          function mudouTamanho (){ 
+               if (window.innerWidth >= 768){ /*verifica se a largura da tela for maior que 768 mostra */
+                    itens.style.display='block' /*mostra o menu lado a lado forçadamente*/
+               }else{
+                    itens.style.display='none' /*se for menor mostra o burguer*/
+               }
           }
      </script>
 </body>
