@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          body{
+               font-family: Arial, Helvetica, sans-serif;
+          }
+          p{
+               width: 500px;
+               background-color: #ccc;
+
+          }
+       .p1{
+          padding: 25px;
+       }
+       .p2{
+          padding: 25px;
+          border: 10px solid green;
+       }
+       .p4{
+          padding: 25px;
+          border: 10px solid green;
+          box-sizing: border-box; /*mantem o tamano de 500px as bordas se manter nessa proporção*/
+          /*box-sizing:content-box; padrao*/
+          /* usando o border box fica 500px do p, - 25 do padding -10px do border q somando fica 70px-500px e no total sobra 430px no p, ele fica um pouco menor e o padding e bordar ficam dentro dos limites*/
+          margin-bottom: 250px;
+       }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <h1>Box Sizing</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, voluptatum libero voluptatibus omnis alias sunt repellendus tempore dicta, veritatis harum quis earum voluptate cupiditate sequi dolores deleniti magni sit. Corrupti, quibusdam. Repellat blanditiis quisquam voluptates id? Eius hic asperiores error iste quibusdam, impedit sint tempore dicta libero provident neque, nostrum dolor soluta accusantium incidunt vel amet laudantium officiis voluptate! Itaque blanditiis, eaque repudiandae perspiciatis omnis dolorum atque eum enim vero fugit, facere deserunt excepturi modi commodi placeat voluptatum nulla ipsa necessitatibus. Soluta assumenda atque quaerat, molestiae laboriosam dolorum vel. Eveniet distinctio, deserunt expedita iste quidem ad deleniti placeat autem soluta.</p>
+     <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et labore adipisci vero ea, accusantium dignissimos impedit iusto perspiciatis. Sunt necessitatibus, tempore incidunt hic quod harum facere animi. Totam iste necessitatibus recusandae nisi similique id ullam natus suscipit animi nulla, amet dolorem corrupti et dolorum praesentium at nam dignissimos nobis eligendi?</p>
+     <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat quos debitis reiciendis, ab, harum enim voluptates aliquam accusantium unde esse nisi itaque quia laborum excepturi. Porro ducimus ut earum.</p>
+     <p class="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat atque odio et eum quas doloremque! Laboriosam omnis cupiditate voluptate, quod explicabo sit eos inventore minima quis aliquam eaque fugit quae asperiores porro fuga. Molestiae expedita quos saepe soluta iusto veritatis quibusdam officiis voluptates eos ipsum nulla accusantium, aperiam voluptatum id magnam veniam aliquam sapiente sunt odit, nihil quaerat? Ad, cupiditate magni. Rem magni, ducimus, ad, dolores commodi molestias tempora ipsa dolor repellat labore deserunt. Eligendi suscipit officiis voluptate aspernatur quidem eos quaerat vero cum quis sapiente qui, sed, ratione accusantium. Animi, ipsa. Nesciunt voluptas suscipit, minus optio impedit aut!</p>
+</body>
+</html>
