@@ -1,0 +1,57 @@
+body{
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #ccc;
+}
+.hero{
+     background-image: url(../imagens/bg-3.jpg);
+     height: 500px;
+     background-size: cover;
+     background-position: right center;
+     padding: 1px; /*para colocar na base*/
+}
+.hero-content{
+     
+     margin: 115px auto 0 ;
+     width: 80%;
+     text-align: center;
+     color: white;
+}
+.hero-content h1{
+     margin: 0;
+     font-size: 50px;
+     text-transform: uppercase;
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.63);
+     margin-bottom: 0;
+}
+.hero-content p {
+     background-color: rgba(0, 0, 0, 0.63);
+     font-size: 18px;
+     display: inline-block;
+     padding: 16px;
+     border-bottom: 1px solid white;
+}
+.menu ul{
+     margin: 20px 20px 0 0 ;
+     text-align: right;
+}
+.menu li{
+     display: inline-block;
+     list-style: inside;
+     margin-left: 15px; 
+}
+.menu a {
+
+     background-color: rgba(0, 0, 0, .3);
+     display: block;
+     padding: 16px;
+     color: white;
+     font-size: 14px;
+     letter-spacing: 2px; /*afastamento das letras*/
+     text-decoration: none;
+     border: 1px solid;
+     text-transform: uppercase;
+}
+.menu a:hover{
+     background-color: rgba(0, 0, 0, .6);
+}
