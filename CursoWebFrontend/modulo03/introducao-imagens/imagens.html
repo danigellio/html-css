@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+    
+     <style>
+          body{
+               font-size: 22px;
+               font-family: sans-serif;
+               width: 700px;
+               margin: auto;
+
+               background-image: url(imagens/bg.jpg) ;
+               background-repeat: no-repeat; /*pode ser repeat-x ou y, ele se repete somente no x ou y*/
+               background-attachment: fixed;/*img fica fixa nao roda mais*/
+               background-size: cover ;/*pode ter 2 valor ex: 400px 600px ....largura x altura, pode ser em %*, temos o CONTAIN: sempre visualizada na totalidade mesmo q dublique/o COVER fica melhor totalmente visivel*/
+
+               background-position: right bottom;
+          }
+          p{
+               line-height: 1.5; /*tamanho do linha, espaçamento*/
+               text-align: justify;
+          }
+          .img-logo{
+              width: 400px;
+          }
+          .img-html{
+               float: left; /*imagem se adapta com o texto,e fica na esquerda*/
+          }
+          .img-css{
+               float: right; /*imagem se adapta com o texto,e fica na direita*/
+          }
+     </style>
+     <title>Imagens</title>
+</head>
+<body>
+     <h1>Trabalhando com imagens</h1>
+     <h2>Imagens Vetorias vs Bitmap</h2>
+     
+     <img src="imagens/logo_ser-frontend-ico.png" class="img-logo" alt="logotipo">
+     <br>
+     <img src="imagens/logo_ser-frontend-ico.svg"  class="img-logo"alt="logotipo">
+
+     <h2>Imagens trasparentes</h2>
+     <img src="imagens/logo_ser-frontend-ico-transparente.gif" alt="" >
+     <br>
+     <img src="imagens/logo_ser-frontend-ico-transparente.png" alt="">
+   
+     <h2>Gif animado</h2>
+     <img src="imagens/walk.gif" alt="animacao mulher andando">
+     <h2>Float</h2>
+     <img src="imagens/html5.png" class="img-html">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit animi quod fugiat voluptatem expedita cumque reiciendis ab maxime tenetur distinctio sapiente ullam architecto nisi, corporis, cupiditate consequuntur. Sapiente, ipsa fugit!</p>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo culpa, consectetur hic nisi provident ullam voluptas quod voluptatibus ducimus! Vero excepturi sint maxime dignissimos, nisi hic sunt qui ab repellat, esse et! Quaerat blanditiis porro laudantium aliquam nemo commodi. Quibusdam saepe, consectetur necessitatibus explicabo accusamus voluptatibus enim eos sed hic illo cumque vel rem aliquam itaque fugit quam magnam laboriosam. In amet totam vel dolorum sit culpa sapiente? Harum quae, minima aut non perferendis animi mollitia tenetur dolorum! Id, beatae.</p>
+     <img src="imagens/css3.png" class="img-css">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit animi quod fugiat voluptatem expedita cumque reiciendis ab maxime tenetur distinctio sapiente ullam architecto nisi, corporis, cupiditate consequuntur. Sapiente, ipsa fugit!</p>
+     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo culpa, consectetur hic nisi provident ullam voluptas quod voluptatibus ducimus! Vero excepturi sint maxime dignissimos, nisi hic sunt qui ab repellat, esse et! Quaerat blanditiis porro laudantium aliquam nemo commodi. Quibusdam saepe, consectetur necessitatibus explicabo accusamus voluptatibus enim eos sed hic illo cumque vel rem aliquam itaque fugit quam magnam laboriosam. In amet totam vel dolorum sit culpa sapiente? Harum quae, minima aut non perferendis animi mollitia tenetur dolorum! Id, beatae.</p>
+
+</body>
+</html>
