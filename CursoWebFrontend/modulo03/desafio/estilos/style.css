@@ -86,3 +86,11 @@ article h2{
      width: fit-content; /*ele pega a largura do meu conteudo e vai ajustarm, caso em vez de 'saiba mais' o cliente queira clique aqui e saiba mais', ele aumenta e se adapta*/
      
 }
+.rodape{
+     color: white;
+     background-color: #6b6c68;
+     text-align: center;
+     padding: 20px;
+     text-shadow: 1px 1px 1px black;
+     letter-spacing: 2px;
+}
