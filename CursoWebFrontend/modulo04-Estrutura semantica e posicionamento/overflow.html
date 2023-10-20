@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          .container{
+               border: 2px solid black;
+               padding: 16px;
+               width: 300px;
+               margin-bottom: 16px;
+               height: 300px;
+               background-color: pink;
+          }
+          .item{
+               background-color: blueviolet;
+               margin-bottom: 10px;
+               padding: 5px;
+              
+          }
+          .overflow-hidden{
+               overflow: hidden;/*faz o conteudo caber dentro do elemente*/
+          }
+          .overflow-scroll{
+               overflow: scroll; /*cria um scroll na parte de vai ter rolagem, e fica aparecendo o a barra de outro scroll mas sem rolagem */
+               
+          }
+          .overflow-auto{
+               overflow: auto; /*aparece somente a barra de rolagem a onde tera a rolagem*/
+          }
+          /* temos
+          overflow-y: hidden; vai esconder no eixo do y
+          overflow-x: hidden; vai esconder no eixo do x
+          overflo-x:scroll; ela cria a rolagem somente no eixo x
+          overflow: visible; é o padrao*/
+       
+          
+     </style>
+     <title>overflow</title>
+</head>
+<body>
+     <div class="container overflow-hidden">
+          <div class="item">lorem</div>
+          <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, asperiores! </div>
+          <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reprehenderit autem cumque libero nostrum. Vel, possimus! Error quisquam aspernatur id repellat alias sed aut quas!</div>
+          <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat magni, similique veniam ex cumque officiis dolorum sint ratione voluptas autem eveniet perspiciatis, dicta ad ipsa aspernatur, exercitationem nesciunt vero non beatae hic. Ut animi possimus eos nulla. Quia repellat fugit quis enim nemo incidunt consequatur, numquam debitis, sit veniam iste id similique ea modi rerum voluptas temporibus, tenetur veritatis omnis vel! Quas culpa omnis at, consectetur veniam eos dolore tempore ex, architecto quod impedit rerum.</div>
+     </div>
+     <div class="container overflow-scroll">
+          <div class="item">lorem</div>
+          <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, asperiores! </div>
+          <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reprehenderit autem cumque libero nostrum. Vel, possimus! Error quisquam aspernatur id repellat alias sed aut quas!</div>
+          <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat magni, similique veniam ex cumque officiis dolorum sint ratione voluptas autem eveniet perspiciatis, dicta ad ipsa aspernatur, exercitationem nesciunt vero non beatae hic. Ut animi possimus eos nulla. Quia repellat fugit quis enim nemo incidunt consequatur, numquam debitis, sit veniam iste id similique ea modi rerum voluptas temporibus, tenetur veritatis omnis vel! Quas culpa omnis at, consectetur veniam eos dolore tempore ex, architecto quod impedit rerum.</div>
+     </div>
+     <div class="container overflow-auto">
+          <div class="item">lorem</div>
+          <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, asperiores! </div>
+          <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reprehenderit autem cumque libero nostrum. Vel, possimus! Error quisquam aspernatur id repellat alias sed aut quas!</div>
+          <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat magni, similique veniam ex cumque officiis dolorum sint ratione voluptas autem eveniet perspiciatis, dicta ad ipsa aspernatur, exercitationem nesciunt vero non beatae hic. Ut animi possimus eos nulla. Quia repellat fugit quis enim nemo incidunt consequatur, numquam debitis, sit veniam iste id similique ea modi rerum voluptas temporibus, tenetur veritatis omnis vel! Quas culpa omnis at, consectetur veniam eos dolore tempore ex, architecto quod impedit rerum.</div>
+     </div>
+</body>
+</html>
