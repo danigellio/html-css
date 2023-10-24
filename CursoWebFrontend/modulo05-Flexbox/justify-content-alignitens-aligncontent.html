@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+     .flexbox{
+          background-color: rgb(179, 218, 252);
+          height: 250px;
+          border: 3px solid red;
+          display: flex;
+          margin-bottom: 16px;
+          /* o flex-box por padrao é flex:no- wrap ou seja em colunas....flex-wrap: nowrap; /* wrap: quebra linha, fica um embaixo do outro,nowrap: nao quebra linha, mantem as colunas na linha*/
+
+          /*flex-direction: row; padrao, colunas
+          column, fica em linhas
+          row-reverse:inverte a ordem ex 4 3 2 1
+          row:padrao*/
+     }
+     .flexbox div{
+          border: 2px solid orange;
+          width: 150px; /*tem uma largura maxima, nao adianta colocar 300 pq nao aumenta, nao faz diferença pq nao aumenta*/
+          margin: 15px;
+     }
+     .flex-container1{
+          /*flex-flow: row wrap; atalho para flex-wrap e flex diretion*/
+
+
+     }
+     .flex-container2{
+
+          justify-content:  center; 
+
+          /*justify-content: FORMAS DE DISTRIBUIR OS ELEMENTOS INTERNO OU FLEX ITENS
+          center ficam todos juntos no centro
+          space-between deixa sem espaco nenhum no primeiro e ultimo
+          space-evenly mesmo espaço entre eles,
+          space-around o primeiro e o ultimo ficam diferente com metade do espaco
+          */
+      }
+     .flex-container2 div{
+          width: 30px;
+          margin: 0;
+       
+          
+     }
+     .flex-container3{
+          justify-content: space-around; /*horizontal*/
+          align-items: center;/*centraliza os elemtos na vertical*/
+     }
+     .flex-container3 div{
+          width: 30px;
+          margin: 0;
+     }
+
+
+     .flex-container4{
+          justify-content: space-around;
+          align-items:center ;/*centraliza os elemtos na vertical... o baselina alinha na base da fonte*/
+     }
+     .flex-container4 div{
+          width: 30px;
+          margin: 0;
+     }
+
+     .flex-container5{
+          justify-content: center; 
+          /*align-items:flex-end; quando tenho apenar 1 linha, funciona se for junto com flex-wrap:nowrap*/
+          align-content: stretch;/*serve para alinha quando tenho mais de uma linha*/
+          flex-wrap: wrap; /*vai quebrar de linha, como formou mais de 1 linha, ele da preferencia para o align-content*/
+     }
+     .flex-container5 div{
+          width: 150px;
+     }
+     
+
+     .flex-container6{
+          justify-content: flex-end;
+          align-items: flex-start;
+          flex-direction: row;
+          height: 400px;
+
+     }
+     .flex-container6 div{
+          background-color: yellow;
+          width: 50px;
+          height: 20px;
+     }
+
+     .flex-container7{
+          justify-content: flex-end;
+          align-items: flex-start;
+          flex-direction: column;
+          height: 400px;
+
+     }
+     .flex-container7 div{
+          background-color: yellow;
+          width: 50px;
+          height: 50px;
+     }
+     .flex-container7 .div2{
+          flex-basis: 200px; /*ele prevalece a width da div acima se for row, o auto se tiver widht ele fica e mantem os valores no caso50px ali em cima ou se for column ele passa a significar a altura da div 2*/
+     }
+     .flex-container8 {
+          justify-content: center;
+          align-items: center;
+          gap: 10px; /*trata dos espacos interno entre as div*/
+
+     }
+     .flex-container8 div{
+          flex-basis: 100px; /*qundo diminuir a tela as div começarem a diminuir eles vao diminuindo ate 10, depois nao sobrando espaço da sobra eles param de diminuir*/
+          background-color: orange;
+          flex-grow: 1; /*ele estica os elementos... o grow ele divide o tamanho q sobra igualmente entre as divi*/
+          margin: 0;
+     }
+     .flex-container8 .div2{
+          flex-grow: 1; /*todo o espaço sobrando vai para a div2*/ /*ficou com 33,333%... 1/3*/
+
+     }
+     .flex-container8 .div4{
+          flex-grow: 2; /*como se fosse 2 div grow, ou seja fica maior 2x*/ /*ficou com 66,666%  2/3
+          */
+
+          /* 0 é padrao para grow e shrink é 1*/
+     }
+     .flex-container9 {
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+     }
+     .flex-container9 div{
+          margin: 0;
+          flex-basis: 150px;
+          background-color: blueviolet;
+     }
+     .flex-container9 .div1{
+          flex-shrink: 2; /*o primeiro no caso a div1 fica menor, quando diminuir a tela ao maximo, ele pega o espaço dela da div2 */
+          /*diminui 2px*/
+     }
+     .flex-container10{
+          flex-direction: row;
+     }
+     .flex-container10 div{
+          background-color: green;
+          font-size: 36px;
+          color: white;
+
+     }
+     .flex-container10 .div2{
+          order: 2; /*quando maior o numero mais pro final ele vai estar... para ordenar*/
+          align-self: center; /*centraliza*/
+     }
+     .flex-container10 .div1{
+          order: 1;
+          align-self: flex-end; /*fica em baixo*/
+     }
+
+
+     /*ATALHO PARA ESCREVER BASIC-GROW-SHRINK
+     flex: 1 3 200px  grow-- shrink -- basic*/
+     </style>
+     
+     <title>Justify-content align-items align-content</title>
+
+</head>
+<body>
+     <div class="flexbox flex-container1">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+
+     <div class="flexbox flex-container2">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+     <div class="flexbox flex-container3">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+     <div class="flexbox flex-container4">
+          <div class="div1">1</div>
+          <div class="div2" style="font-size: 36px;">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+     <div class="flexbox flex-container5">
+          <div class="div1">1</div>
+          <div class="div2" >2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+
+     <div class="flexbox flex-container6">
+          <div class="div1">1</div>
+          <div class="div2" >2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+     <div class="flexbox flex-container7">
+          <div class="div1">1</div>
+          <div class="div2" >2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+
+     <div class="flexbox flex-container8">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+     <div class="flexbox flex-container9">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+     <div class="flexbox flex-container10">
+          <div class="div1">1</div>
+          <div class="div2">2</div>
+          <div class="div3">3</div>
+          <div class="div4">4</div>
+     </div>
+</body>
+</html>
