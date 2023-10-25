@@ -62,10 +62,12 @@ body{
 
 }
 .list-item__action  {
-    
+     display: flex;
      gap: 20px;
      align-items: center;
      opacity: 0; /*opacidade*/
+    
+     
     
 }
 .list-item:hover .list-item__action{
