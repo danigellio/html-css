@@ -20,17 +20,17 @@ body{
      margin: 32px 0 ;
      
 }
-.header{
+.header{ 
      display: flex;
      background-color:#05080a;
      padding: 16px;
      justify-content: space-between;/*espaço entre ele*/
      align-items: center;
 }
-.header__logo{
+.header__logo{ 
      font-size: 36px;
      text-transform: uppercase;
-     margin-left: 16px;
+     margin-left: 16px; 
      letter-spacing: 2px;
 
 }
@@ -49,7 +49,7 @@ body{
 a.hearder__nav--active{ /*fazemos isso para conseguir acessar o a especifico da classe, pois a configuracao acima ela prevalese, entao devemos fazer assim para conseguir acessas a.header.... o a. prevalece pois é especifico do a .header*/
      background-color: #cbe300;
      color: #0c1014;
-     pointer-events: none; /*nao mostra o cursos de pointer mesmo sendo a */
+     pointer-events: none; /*nao mostra o cursor de pointer mesmo sendo a */
      /*cursor: none; ele nao mostra o cursor da monszinha mais continua com o resto da configuraçao*/
 
 }
