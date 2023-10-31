@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          :root{
+               --collor: red;
+
+          }
+          p{
+               color: var(--collor);
+          }
+          .div1{
+               --collor:green;
+               /*ele aplica no p da div 1 o verde pq esta mais perto e assim ele usa o q esta mais perto*/
+          }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <div class="container">
+          <div class="div1">
+               <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="2"><p>Lorem ipsum dolor sit amet.</p></div>
+     </div>
+</body>
+</html>

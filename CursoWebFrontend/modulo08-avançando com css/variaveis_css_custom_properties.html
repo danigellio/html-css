@@ -4,16 +4,19 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
+
+          :root{
+               /*mesma coisa do html, porem fica melhor aqui as variavel*/
+          }
           html{
                font-size: 62.5%; /*10px*/
+               --header-height:15rem;/* variavel, consigo mudar aqui e mudo todo o resto, melhor para manutençao*/
                
           }
-          /*calc(var (--height--header)*10);        ou calc(150px * 2);*/
-
           header{
                width: 100%;
                background-color: rgba(179, 79, 21, 0.322);
-               height: 15rem;
+               height: var(--header-height);
                font-size: 2rem;
                position: fixed;
                top: 0;
@@ -24,7 +27,7 @@
                min-height: calc(100vh - 15rem); /*100vh*/
                background-color: #ccc;
                font-size: 2rem;
-               margin-top: 15rem;
+               margin-top: var(--header-height);
 
           }
           footer{

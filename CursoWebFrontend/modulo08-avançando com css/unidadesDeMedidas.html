@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=, initial-scale=1.0">
+     <style>
+          html{
+               font-size: 62.5%;
+               /*com essa configuração de 62.5%
+               1em equivale a 10px
+               se eu querer 16px seria 1.6em*/
+
+          }
+          .emH1{
+               font-size: 2.4em;
+          }
+
+          .emP{
+               font-size: 1.6em; /*equivale a 20px e seu filho o B equivale 1em 20px*/
+
+               /*sem o 62.5% 1em é = a 16px
+               2em = 32px*/
+          }
+          /* a unidade de medida EM é sempre relativa ao tamanho de font do elemente pai*/
+          .emB{
+               color: rebeccapurple;
+               font-size: 2em; /* como seu pai equivale a 2 em =20px, 2em no b equivale o dobro 40px*/
+          }
+
+          .remH1{
+
+          }
+          .remP{
+               font-size: 3em;/*30px*/
+          }
+          .remB{
+               font-size: 1.6rem;/*se relaciona com o root e nao com o pai, ele equivale a 10px e nao mais o dobro*/
+          }
+
+
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <h1 class="emH1">Unidades de medidas EM</h1>
+     <p class="emP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure <b class="emB">quasi ut ipsam</b> tempore iusto perferendis beatae excepturi ullam ex, minus, dolore natus repellat itaque voluptatum assumenda, modi at sequi omnis.</p>
+
+     <h1 class="remH1">Unidades de medidas REM</h1>
+     <p class="remP">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure <b class="remB">quasi ut ipsam</b> tempore iusto perferendis beatae excepturi ullam ex, minus, dolore natus repellat itaque voluptatum assumenda, modi at sequi omnis.</p>
+
+</body>
+</html>
