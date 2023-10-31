@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+
+          /*podemos ter variavel 
+          ex --anima: cubic-bezier(.59, -0.3, .49, 1.36); e usar 
+          transition-timing-function:var(--anima);*/
+          div{
+               background-color: orange;
+               width: 200px;
+               height: 200px;
+               margin: 100px auto;
+
+               transition-property: all; /*pode der all, ou so oq vc qer animar ex: widht ou widht,height tudo junto
+               
+               transition-property:widht,height; e usa as outras propriedades de transition tbm dessa forma ex: transition-duration:1s,2s;  o 1 vale pro widht e o 2 para height, tbm no transition-timing-function: ease, linear; e transition-delay:.5s, 3s ;*/
+
+
+               transition-duration:1s, 2s ; 
+               /*se usar o 0 colocar o s*/
+
+               transition-timing-function: ease;
+               /*cubic bezier tem um site para vc personalizar, o cubo rosa é oq vc personalizou, copia os numeros e cole entre os parenteses (.59, -0.3, .49, 1.29*/
+
+               /*linear vai da mesma velocidade
+               ease desacelera no final
+               ease-in começa devagar e depois acelera
+               ease-out comeca rapido e desacerela
+               e ease in put q faz os dois jutnso 
+               */
+
+               transition-delay:.5s, .2s ; /*tempo entre por e tirar o mouse, o numero 0 precisa ter o 'S' ou seja 0s */
+
+
+               /*TRANSITION: PROPERTY(ALL), DURATION(0S), FUNCTION(EASE), DELAY(0S)
+               ex: transition:widht  1s; q fica para os dois primeiros o resto fica sem
+               -- transition: widht .5s ease, height 1s ease .3s, background-color .5s ease */
+          }
+          div:hover{
+               width: 400px; /*podemos animar altura e largura tbm, podemos animar coisas com numeros, e cor tbm pq cor é numero*/
+               background-color: blueviolet;
+               
+          }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <div></div>
+</body>
+</html>

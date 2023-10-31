@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          div{
+               width: 200px;
+               height: 100px;
+               background-color: darkolivegreen;
+               /*outline nao altera o elemente igual o border-box faz*/
+               outline: 5px solid black;
+               box-sizing: border-box;/*para bordar ficar contida entro*/
+               outline-offset: 16px; /*a distancia entre o contorno e o elemento, pode ter valores negativos*/
+               margin: 100px auto;
+          }
+          div:hover{
+               outline: 10px solid black ;
+               outline-width: 20px; /*aumenta o tamanho*/
+          }
+
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     
+     <div>Lorem ipsum dolor sit amet.</div>
+</body>
+</html>
