@@ -1,1 +1,83 @@
- 
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Playpen+Sans:wght@200&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root{
+     font-size: 62.5%;
+     --italiana: 'Italiana', sans-serif;
+     --normal: 'Open Sans', sans-serif;
+ }
+ html,body{
+     margin: 0;
+     padding: 0;
+     
+ }
+ body{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1.6rem;
+ }
+ header{
+     background-color: #162028;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .header__name{
+     font-family: var(--italiana);
+     color: white;
+     margin: 0 0 0 20rem;
+     font-size: 4.5rem;
+ }
+ .header__ul{
+     display: flex;
+     gap: 2rem;
+     margin: .5rem 2rem .5rem  0;
+ }
+ .header__ul li {
+     list-style-type: none;
+     font-family: var(--normal);
+     font-size: 2rem;
+     letter-spacing: .2rem;
+     text-transform: uppercase; 
+     padding: 1rem;
+     
+ }
+ .header__ul li a{
+     color:  #425564;
+     text-decoration: none;
+ }
+ .imagem-inicial {
+     background-image: url(../inicio/imagens/topo.jpg);
+     background-size: cover;
+     width: 100%;
+     height: 60rem;
+     background-position: left bottom;    
+ }
+ .section_{
+     background-color: aqua;
+     width: 60%;
+     margin: auto;
+ }
+.article_first{
+    
+     margin-top: 10rem;
+}
+.article_first-title{
+     font-family: var(--italiana);
+     text-align: center;
+}
+.article_first p{
+     text-align:center ;
+     line-height: 3rem;
+     
+}
+
+.amostras__roupas{
+     list-style-type: none;
+     display: flex;
+     gap: 2rem;
+     justify-content: space-evenly;
+     margin: 0;
+     padding: 0
+     ;
+}
