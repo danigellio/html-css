@@ -12,10 +12,12 @@ html{
      font-size: 62.5%; 
      font-weight: 400; 
      /*poderia ser FONT: 400 62.5% 'INTER',SAN SERIF;*/
-
 }
 p,a{
      font-size: 1.6rem;
+}
+nav a {
+     color: inherit; /* inherit herda a cor do elemento pai no caso wrapperContainer-dark color fafafa */
 }
 .upper{
      text-transform: uppercase;
@@ -23,8 +25,6 @@ p,a{
 .wrapperContainer-dark{
      background-color: #2a2a2a;
      color: #fafafa;
-
-
 }
 .wrapperContainer-light{
      background-color: #fafafa;
@@ -37,4 +37,25 @@ p,a{
 .container{
      max-width: 127.6rem; /*mesmo q 1276px*/
      margin: auto;
+}
+.header{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: var(--primary-color);
+     padding: 2rem 0;
+}
+
+.header_nav a {
+     padding: .75em 1.15em; /* em equivale 16 pixel, por conta do 'p' la em cima*/
+     border: solid 1px; /*nao coloquei cor, porem ele herda da cor da letra */
+     text-decoration: none;
+}
+.header_nav ul{
+     display: flex;
+     gap: .6rem;
+     list-style: none;
+}
+.header_nav a:hover{
+     background-color:black;
 }
