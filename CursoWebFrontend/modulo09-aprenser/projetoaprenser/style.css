@@ -16,11 +16,23 @@ html{
 p,a{
      font-size: 1.6rem;
 }
+h1{
+     font-size: 4.8rem;
+     
+}
 nav a {
      color: inherit; /* inherit herda a cor do elemento pai no caso wrapperContainer-dark color fafafa */
 }
 .upper{
      text-transform: uppercase;
+}
+.btn{
+     background-color: var(--primary-color);
+     border-radius: 4px;
+     font-size: 1.8rem;
+     text-decoration: none;
+     padding: 1.6rem 4.6rem;
+     display: inline-block;
 }
 .wrapperContainer-dark{
      background-color: #2a2a2a;
@@ -58,4 +70,17 @@ nav a {
 }
 .header_nav a:hover{
      background-color:black;
+}
+.wrapperContainer-hero{
+     /*pode por variavel tbm dentro, var(--cor)*/
+     background-image: linear-gradient(transparent, yellow);
+}
+.heroBanner{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 20rem;
+}
+.hero_title{
+     margin-bottom: 4rem;
 }
