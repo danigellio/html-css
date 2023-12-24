@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <h1>Formulario de bursca</h1>
+     <form action="https://www.google.com.br/search" method="get" >
+          <label for="busca">Faça uma busca</label>
+          <!--
+               post fica escondido, quando precisa de seguracao ex login ,senhas
+               get fica na url, quando nao precisa de segurança
+          -->
+          <input type="text" name="q" id="busca"> <!--o nome, é o nome do meu imout q meu servidor vai ter acesso-->
+          <!--Q é uma variavel de busca no google-->
+          <input type="submit" value="OK">
+     </form>
+</body>
+</html>
