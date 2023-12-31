@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <style>
+          textarea{
+               resize: none; /*desabita a opçao de alterar o tamanho da caixa de msg*/
+          }
+     </style>
+     <title>Formulario</title>
+</head>
+<body>
+     <form action="">
+          <fieldset>
+               <legend>Introdução</legend>
+
+               <label for="iemail">Email</label> <br>
+               <input type="email" name="email" id="iemail" required maxlength="10"> <!-- maxlength tanto de caracteres permitido ou minlength-->
+               <br><br>
+
+               <label for="ifilho"> Quantidade de filhos</label> <br>
+               <input type="number" name="filho" id="ifilho" min="0" max="1000">
+               <br><br>
+
+               <input type="date" name="" id="" min="2022-01-15" max="2022-12-15">
+
+               <br><br>
+               Possui atividade extra:
+               <!--podemos colocar o label assim-->
+               <label ><input type="radio" name="atv" id="" value="s">Sim</label> <!--colocar value, o servidor receber atv=s -->
+               <input type="radio" name="atv" id="   ">Não
+               <input type="submit" value="Enviar">
+          </fieldset>
+          <fieldset>
+               <legend>Area de interesse</legend>
+               <label ><input type="checkbox" name="" id="" value="html">HTML</label>
+               <!-- colocar o value com o nome ,para o servidor saber oq foi escolhido-->
+               <input type="checkbox" name="" id="">PYTHON
+               <input type="checkbox" name="" id="">JS
+               <input type="checkbox" name="" id="">CSS
+
+               <br><br>
+
+               <label > Escolha uma linguagem <br> 
+                    <select name="linguagem" id="" required multiple size="2"> 
+                         <!--com o multiple: vc consegue selecionar varias opçoes com o ctrl
+                         size:no caso size 2, aparece somente 2 casas-->
+
+                         <!--optgroup fica agrupado ... o nome front end nao é selecionavel somente oq esta dentro-->
+                         <optgroup label="front end">
+                              <option value="html">HTML5</option>
+                         <option value="JS">JS</option>
+                         </optgroup>
+
+                         <option >Selecione</option>
+                         <option value="html">HTML</option>
+                         <option value="Java">Java</option>
+                         <option value="CSS">CSS</option>
+                    </select>
+               </label>
+
+               <!--vc consegue digitar para procurar, em caso de mtas escolhas-->
+          <input type="text" list="linguagemlist">
+          <datalist id="linguagemlist">
+               <option value="HTML">
+                    <option value="CSS">
+                         <option value="JAVA">
+
+          </datalist>
+          </fieldset>
+
+
+          <fieldset>
+               <legend>Mensagem</legend>
+               <textarea name="msg" id="" cols="30" rows="10" maxlength="255"></textarea>
+               <!--resize: none; no css, explicação acima no style, pode remover o cols e rows e trabalhar no css com width e height 
+               maxlength=50 significa 50 caracteres permitido-->
+               <br>
+               <textarea cols="50" rows="8" disabled >
+<!--READONLY, nao deixa o uruario mecher no que esta digitado no contrato,
+DISABLED, tbm nao deixa o usuario mecher porem fica melhor visualmente -->
+Contrato de utilização 
+     1.1 Regra 1
+     1.2 Regra 2
+               </textarea>
+               <label >
+                    <input type="checkbox" name="" id="">Li e aceito o contrato
+               </label>
+               <br><br>
+               <input type="file" name="" id="">
+          </fieldset>
+
+
+
+     </form>
+
+</body>
+</html>

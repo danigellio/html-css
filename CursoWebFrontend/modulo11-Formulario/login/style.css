@@ -51,3 +51,22 @@ legend{
      margin-bottom: .5rem;
 
 }
+.btn{ /*nao usamos esse btn*/
+    width: fit-content; /*largura do conteudo ou seja o 'entrar'*/
+    margin-left: auto; /*fica totalmente neste lado*/
+    background-color: rgb(8, 8, 122);
+    color: white;
+    cursor: pointer;
+}
+.action{
+     display: flex;
+     gap: 1px;
+}
+.btn2{
+     background-color: rgb(8, 8, 122);
+    color: white;
+    cursor: pointer;
+}
+.btn--apagar{
+     background-color: rgb(122, 16, 8);
+}
