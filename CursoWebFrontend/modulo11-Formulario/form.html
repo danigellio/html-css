@@ -8,6 +8,9 @@
           textarea{
                resize: none; /*desabita a opçao de alterar o tamanho da caixa de msg*/
           }
+          body{
+               padding-bottom: 150px;
+          }
      </style>
      <title>Formulario</title>
 </head>
@@ -86,15 +89,49 @@ Contrato de utilização
      1.2 Regra 2
                </textarea>
                <label >
-                    <input type="checkbox" name="" id="">Li e aceito o contrato
+                    <input type="checkbox" name="" id="" checked>Li e aceito o contrato
+                    <!--checked ja fica habilitado-->
                </label>
                <br><br>
                <input type="file" name="" id="">
           </fieldset>
+          <label >ola
+               <input type="hidden" name="" value="abcdef123"></label>
+
+               <br><br>
+               <input type="submit" value="Ok">
+               <br><br>
+               <input type="button" value="Mandar"> 
+               <br><br><!--button é um botao, mais ele nao envia como o submit, usado mais com javascript, ele nao é para enviar formulario, o submit é para enviar-->
+               <button type="submit">Madar com tag button</button> <!--mesmo comportamento do submit ele tenta enviar o formulario , com esse buttom podemos colocar imagem, escrever mais, usar <em> italico--> <br><br>
+                    <button type="button"><b>Mandar em negrito</b></button><!--nao enviar formulario, so fica funcional com o js-->
+               <br><br>
+
+                    <input type="search" name="" id="">
+                    <!--search , ele é para digitar, e a diferença é que ele inclui o 'x' para limpar-->
+
+                    <br><br>
+                    <input type="range" name="" id="" min="0" max="10" step="2"> 
+                    
+                    <br><br>
+                    <input type="color" name="" id="">
+
+                    <br><br>
+                    <input type="time" name="" id="">
+
+
+                    <br><br>
+
+                    <input type="email" name="" id="" placeholder="name@email.com">
+                    <!--placeholder é a dica que fica para o usuario-->
+
+                    <br><br>
+
 
 
 
      </form>
+     
 
 </body>
 </html>

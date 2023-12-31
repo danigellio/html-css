@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Meter e Progress</title>
+</head>
+<body>
+     <h1>Meter</h1>
+     <!--como uma regua, um intervalo-->
+     <label for="comb">Nivel combustivel
+          <meter min="0" max="100" low="30" high="90" value="50" optimum="50" id="comb"></meter>
+     </label>
+     <!--low seria o minimo aceito pra ser bom, o high seria o maximo para ser bom acima seria ruim, e o value o valor ja colocado. optimum seria o valor ideal, entre o low e o high, o baixo e alto-->
+
+
+     <h1>Progress</h1>
+     <!--porcentagem, o progresso de uma deteminada tarefa, nao tem valor minimo, somente valor maximo-->
+     <label for=""> Porcentagem da tarefa
+          <progress max="100" value="70"> 70% </progress>
+     </label>
+     <!--falback vc coloca 70% caso o browser nao entenda,-->
+
+     <!-- a tag output, serve para o usuario algum dado, um dado dinamico q o usuario vai interagir em tempo real, mostra algum valor para o usuario, mostra o resultado de uma ação, uma conta por exemplo-->
+     <form oninput="res.value=a.value * b.value">
+          <input type="number" name="a" id="a"> X
+          <input type="number" name="b" id="b"> =
+          <output name="res" for="a b"></output>
+     </form>
+</body>
+</html>
