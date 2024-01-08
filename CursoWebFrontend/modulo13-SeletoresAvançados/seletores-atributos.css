@@ -1,0 +1,17 @@
+a[href="#"]{ /*selecione as tag A q contes href contendo #*/
+     /*opacity: .2;*/
+}
+a[href="#"]:not(.link-ok){ /*selecione as tag A q contes href contendo #*/
+     opacity: .2;
+}
+a[href^="http"]{/*link href q começa com http no atributo href*/
+     color: red;
+
+}
+a[href$=".pdf"]{/*todo href q termina com .pdf*/
+     color: green;
+
+}
+a[target]{ /*ou target="_blank"*/
+     text-decoration: none;
+}

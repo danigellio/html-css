@@ -1,0 +1,47 @@
+/*div :first-child{
+     color: red;
+} /*espaço significa descendencia... seleciono todo elemento q é primeiro filho q esta contido dentro de um div*/
+
+
+/*coloque sempre o tipo, ex: p, a etc.. nao coloque classe ou id*/
+
+
+p:first-child{ /*selecione o primeiro filho se for um paragrafo, se o primeiro filho nao for um paragrafo ele nao seleciona*/
+     color: red;
+}
+
+p:last-child{ /*o ultimo filho se for um paragrafo*/
+     color: orange;
+}
+
+p:nth-child(2){ /*pega o segundo filho se for um paragrafo, vc consegue passar o valor que quiser*/
+background-color: blue;
+}
+p:first-of-type{ /*pego o primeiro filho do tipo P*/
+     background-color: green;
+}
+
+p:last-of-type{
+     background-color: yellow;
+}
+p:nth-of-type(2){ /*todo segundo filho */
+     text-decoration: underline;
+}
+/*seleciono os elementos q vc colocar 1,3,6,9etc
+li:nth-child(1),
+li:nth-child(3),
+li:nth-child(6){
+     background-color: bisque;
+}*/
+
+li:nth-child(3n - 2){ 
+     /*
+     ODD seleciona cor sim cor nao
+     pode ser EVEN e fica selecionado em pares ou 2n OU 3n etc.., faz a mesma coisa
+     ou formulas matematicas 3n - 2*/
+     background-color: antiquewhite;
+}
+
+p:nth-of-type(3n - 2){
+     text-align: right;
+}
