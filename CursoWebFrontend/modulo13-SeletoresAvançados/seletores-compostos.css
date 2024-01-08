@@ -1,0 +1,28 @@
+article{
+     outline: 4px solid green; /*cria uma caixa*/
+}
+
+
+
+article a { /*toda tag A contido no article*/
+     color: red;
+}
+
+article a > b{  /*toda tag B filha direto de uma tag A*/
+     color: green;
+}
+h3 + p { /*todo P que é o irmao do h3,
+     irmao adjacente, se tiver outra tag ex hr antes do P ele ja nao é mais o irmao adjacente, o irmao adjacente é o hr, significa o proximo irmao*/
+     background-color: yellow;
+}
+
+hr ~ p{/*todos os Paragrafos que vem imediatamente apos o hr*/
+     border: 4px dashed darksalmon;
+}
+
+.destaque{
+     padding-left: 2rem;
+}
+article p:not(.destaque){ /* dentro de article selecionei todos os paragrafos q nao possuem a classe destaque*/
+     background-color: rgb(165, 141, 187);
+}
