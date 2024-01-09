@@ -1,0 +1,34 @@
+p::before{
+     content: "ANTES >";
+}
+P::after{
+     content: "< DEPOIS";
+}
+/* esse texto nao é possivel selecionar como texto no browser*/
+div{
+     border: 3px solid gray;
+     padding: 1em;
+     position: relative;
+}
+p{
+     margin: 0;
+
+}
+
+div::after{
+     content: "";
+     width: 1em;
+     height: 1em;
+     background-color: green;
+     display: block; /*tem quebra de linha*/
+     position: absolute;
+     right: 0;
+     bottom: 0;
+
+}
+div::before{ /*para por imagem*/
+     content: url(https://via.placeholder.com/64/0000FF/ffffff);
+     float: left;
+     margin-right: 1em;
+
+}
