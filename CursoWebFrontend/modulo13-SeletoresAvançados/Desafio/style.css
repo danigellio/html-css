@@ -1,0 +1,25 @@
+a{
+     background-color: #ccc;
+     display:inline-block;
+     margin-bottom: 1em;
+}
+a[target="_blank"]::after{
+     content: url(../Desafio/imagens/newWindow-icon.png);
+     margin-left: .5em;
+}
+a[href$=".pdf"]::before{
+     content: url(../Desafio/imagens/pdf-icon.gif);
+     margin-left: .5m;
+}
+input[type="checkbox"]:checked + label{ /*estou selecionando o label q esta checked*/
+     color: green;
+}
+input[type="checkbox"]:not(:disabled)+label{ /*estou selecionando o label q esta checked*/
+     color: rgb(128, 0, 0);
+}
+input[type="checkbox"]:disabled+label {
+     color: blue;
+}
+li li:nth-child(3){
+      background-color: yellow;
+}
