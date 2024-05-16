@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          p a { /*seleciona o A dentro do paragrafo*/
+               color: red;
+          }
+
+          p:has(a){ /*seleciona o P que contem o A*/
+               background-color: brown;
+          }
+          p:has(.teste){
+               background-color: blueviolet;
+          }
+
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <p class="teste">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, illum?</p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores aspernatur <a href="#" class="teste">Link</a> possimus quibusdam reiciendis blanditiis repudiandae!</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum minus odio repudiandae fugiat? Iusto, magnam ullam. Cumque delectus officia ad?
+
+     </p>
+     
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          table{
+               border-collapse: collapse;
+               width: 100%;
+               margin-bottom: 24px;
+          }
+
+          th,td{
+               border-bottom:  1px solid #ddd;
+               padding: .5em;
+          }
+
+          th{
+               background-color: #f2f2f2;
+               text-align: left;
+          }
+          tr:nth-child(even){
+               background-color: #f9f9f9;
+          }
+
+          tr:nth-child(odd){
+               background-color: #e9e9e9;
+          }
+
+          tr:hover{
+               background-color: white;
+          }
+
+          tr:has(input[type="checkbox"]:checked){ /*para mudar a cor de quando estiver marcado o check*/
+               /*para ficar mais protegido pordemos por
+               tr:has(td:first-child input[type="checkbox"]:checked)*/
+               background-color: #aaffaa;
+          }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     
+     <table>
+          <tr>
+               <th></th>
+                    <th>Nome</th>
+                    <th>Email</th>
+          </tr>
+          <tr>
+               <td> <input type="checkbox"> </td>
+               <td>John Doe
+               <td>johendoe@gmal.com</td>
+               </td>
+          </tr>
+
+          <tr>
+               <td> <input type="checkbox"> </td>
+               <td>John Doe
+               <td>johendoe@gmal.com</td>
+               </td>
+          </tr>
+
+          <tr>
+               <td> <input type="checkbox"> </td>
+               <td>John Doe
+               <td>johendoe@gmal.com</td>
+               </td>
+          </tr>
+
+          <tr>
+               <td> <input type="checkbox"> </td>
+               <td>John Doe
+               <td>johendoe@gmal.com</td>
+               </td>
+          </tr>
+
+          <tr>
+               <td> <input type="checkbox"> </td>
+               <td>John Doe
+               <td>johendoe@gmal.com</td>
+               </td>
+          </tr>
+
+
+     </table>
+
+</body>
+</html>

@@ -6,15 +6,52 @@ background-color: gray;
 color: white;
 
 }
-
 button:disabled{
      opacity: .5;
 }
-p:empty::before{ /*paragrafo que esta vazio*/
+
+p:empty::before{ /*paragrafo que esta vazio, vai ter um conteudo depois o content*/
      content: "paragrafo vazio !";
 }
 
-a:focus, a:hover{
+a:focus, a:hover{ /*quando esta em foco com o mouse clicado
+     o hover é quando passa o mouse*/
      background-color: yellow;
 }
+input[type="text"]{
+     background-color: yellow;
 
+
+}
+input[type="text"]:read-write{ /*somente input q sao para leitura e escrita q ele muda a cor*/
+     /*:read-only   que é somente onde é para ler q ele muda a cor
+     */
+
+     background-color: rgb(0, 255, 98);
+     
+
+}
+input[type="text"]:read-only:not(:disabled) {
+     background-color: rgb(255, 0, 179);
+     /*menos o disable*/
+
+}
+
+input[type="text"]::placeholder{ /*selecionando o placehouder*/
+    color: aqua;
+}
+
+input[type="text"]:placeholder-shown{
+     background-color: rgb(0, 17, 255);
+/*aparece quando o placehouder esta vazio, quando vc começa a digitar ele some*/
+
+}
+
+/*-------*/
+p:only-child{ /*quero selecionar o paragrafo q é unico filho, q é filho unico, nao pode ter nenhum irmao, nem mesmo hr, a, em, qualquer coisa, ele tem q ser unico */
+     background-color: brown;
+
+}
+p:read-write{
+     border-bottom: 2px solid rgb(0, 0, 0);
+}
