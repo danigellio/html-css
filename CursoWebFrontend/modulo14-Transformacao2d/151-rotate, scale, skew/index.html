@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          body{
+               margin-bottom: 100vh;
+          }
+          div{
+               outline: 1px solid #888;
+               width: 200px;
+               margin: .5em auto;
+          }
+          p{
+               width: 100%;
+          }
+
+          .destaque{
+               background-color: yellow;
+          }
+         
+          .div1 .destaque{
+               transform: rotate(45deg);
+          }
+
+          .div2 .destaque{
+              /* transform: scale(1.5); /*1 é o tamanho original, 1.5 e metade do seu tamanho. 2 e o dobro do seu tamanho*/
+               transform: scaleY(1.5); /* OU (2, 1);*/
+          }
+
+          .div3 .destaque{
+               transform: skew(15deg);
+               /*temos skewY  e skewX(20deg)*/
+          }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <div class="div1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+     </div>
+
+     <div class="div2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+     </div>
+
+     <div class="div3">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+     </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+          body{
+               margin-bottom: 100vh;
+          }
+          div{
+               outline: 1px solid #888;
+               width: 200px;
+               margin: .5em auto;
+          }
+          p{
+               width: 50%;
+          }
+
+          .destaque{
+               background-color: yellow;
+          }
+          .div1 .destaque{
+               transform: translate(80%);/* 50% significa o tamanho do proprio elemento*/
+               /*transform: translate(50px, -50px);*/
+              /* transform: translateX(50px) ;*/
+               /* TRANSLATEY(50PX) OU (-50PX)
+               TRANSLATE(50PX, 50PX) X E Y*/
+          }
+          .div2 .destaque{ /* ex50% seria 50% do elemento pai, ou seja da div*/
+               position: relative;
+               top: -50px;
+               left: 50px;
+               /*ou left: 50%;*/
+          }
+     </style>
+     <title>Document</title>
+</head>
+<body>
+     <div class="div1">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+     </div>
+
+     <div class="div2">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque!</p>
+     </div>
+</body>
+</html>
