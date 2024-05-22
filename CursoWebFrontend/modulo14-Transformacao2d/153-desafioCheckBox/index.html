@@ -38,15 +38,111 @@
 
           .bl12 span{
                display:inline-block ;
-               font-size: 25px;
+               font-size: 20px;
                width: 1em;
                height: 1em;
                background-color: aqua;
+               position: relative;   
+               transition: background-color .3s;
           }
               
-          .bl12 input[type=":checkbox"]:checked + span{
-               
+          .bl12 input[type="checkbox"]:checked+span {
+               /*SELECIONA A SPAN Q ESTA DEPOIS DO MEU INPUT CHECKBOX CHECADO*/
+               background-color: rgb(218, 218, 9);
+                           
           }
+          .bl12 input[type="checkbox"]+span::before {
+             content: ""; /*tem q ter content mesmo nao tendo nada, se for usar after ou before*/
+             display: block;
+             border:  .090em solid white;
+             /* faz 2px divide pelo20px*/
+             position: absolute;
+             top: .077em; /*era 2px*/
+             left: .38em;
+             right: .3em;
+             bottom: .3em;
+             transform: rotate(45deg);
+             border-left-color: transparent;
+             border-top-color: transparent;   
+             opacity: 0;    
+             transition: opacity .5s;  
+          }
+          .bl12 input[type="checkbox"]:checked+span::before {
+               opacity: 1;
+          }
+          .bl12 input[type="checkbox"]{ /*para retirar a caixa do checkbok e consigo navegar com o teclado*/
+               width: 1px;
+               height: 1px;
+               padding: 0;
+               margin: 0;
+               overflow: hidden;
+               position: absolute;
+               outline: none;
+
+          }
+            .bl12 input[type="checkbox"]:focus+span{ /*para nao ter pulo quando clica com teclado*/
+               outline: 1px solid black; /*nao altera o elemento*/
+               outline-offset: -1px; /*para ficar a bordar para dentro*/
+               box-sizing: border-box;
+            }
+
+            .switch{
+               --switch-color: #cfd8dc ;
+               --time: .2s;
+            }
+            .switch span{
+               display: inline-block;
+               width: 2em;
+               height: 1em;
+               border-radius: 1em;
+               outline: 2px solid var(--switch-color);
+               overflow: hidden;
+               position: relative ;
+            }
+            .switch span::after{
+               content: '';
+               display:block;
+               width: 1em;
+               height: 1em;
+               border-radius: 50%;
+               background-color: var(--switch-color);
+               transition: all var(--time) ease-in-out;transform: translateX(0);
+
+
+            }
+            .switch input:checked+span::after{
+               transform: translateX(100%);
+               background-color: #7a8184;
+            }
+
+            .switch input[type="checkbox"]{ /*para retirar a caixa do checkbok e consigo navegar com o teclado*/
+               width: 1px;
+               height: 1px;
+               padding: 0;
+               margin: 0;
+               overflow: hidden;
+               position: absolute;
+               outline: none;
+
+          }
+          .switch span::before{
+               content: '';
+               display: inline-block;
+               width: 100%;
+               height: 100%;
+               background-color: var(--switch-color);
+               transform: translate(-100%);
+               transition: transform var(--time) ease-in-out;
+               position: absolute;
+               z-index: 0;
+          }
+          .switch input:checked+span::before{
+               transform: translateX(0);
+            }
+            .switch input:focus +span{
+               outline: 1px solid black;
+               outline-offset: 1px; /*afasta a borda*/
+            }
      </style>
      <title>CheckBox1</title>
 </head>
@@ -81,6 +177,26 @@
      html
     </label>
 
+    <hr>
+
+    <label class="switch" >
+     <input type="checkbox" >
+     <span></span>
+     html
+    </label>
+
+    <label class="switch" >
+     <input type="checkbox" >
+     <span></span>
+     html
+    </label>
+
+    <label class="switch" >
+     <input type="checkbox" >
+     <span></span>
+     html
+    </label>
+
 
 </body>
-</html>
+</html> 
