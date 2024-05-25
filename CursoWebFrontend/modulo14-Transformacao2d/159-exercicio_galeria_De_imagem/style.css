@@ -1,0 +1,50 @@
+*,*::after, *::before{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+
+}
+body{
+     font-family: san-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     min-height: 100vh;
+     background-color: rgb(47, 65, 50);
+
+}
+img{
+     max-width: 100%;
+     display: block;
+}
+.gallery{
+     width: 60rem;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     gap: .5em;
+     background-color: white;
+}
+
+.gallery .image{
+     flex-basis:calc(25% - .5em); /*largura dos elementos, .5em é o gap*/
+    
+     position: relative;
+}
+
+
+.image a{
+     text-decoration: none;
+}
+.gallery p {
+     background-color: rgba(0, 0, 0, .8);
+     color: rgb(255, 255, 255);
+     text-transform: uppercase;
+     padding: 1em;
+     letter-spacing: 2px;
+     font-size: .75em;
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+}
