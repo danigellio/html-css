@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          body{
+               font-family: Arial, Helvetica, sans-serif;
+
+          }
+          p{
+               width: 50%;
+               background-color: #ccc;
+          }
+          h1{
+               border: 2px solid red;
+          }
+          a{
+               background-color: yellow;
+          }
+          /*elementos de linha nao recebem propriedade do box model*/ 
+          strong{
+               display: block;
+               padding: 25px;
+               background-color: pink;
+          }
+          i{
+               display: inline-block; /*fica block na linha*/
+               padding: 25px;
+               background-color: orange;
+               width: 50%; 
+               
+          }
+          b{
+               display: inline;
+               visibility: hidden;
+          }
+     </style>
+</head>
+<body>
+     <h1>display</h1>
+     <p>Lorem ipsum dolor <a href="#">link</a> sit amet consectetur adipisicing elit. Facere nostrum <b>texto em negrito</b>alias sapiente <strong>texto em negrito com strong</strong>porro provident Lorem, ipsum dolor <em>texto em italiano com em</em>sit amet consectetur adipisicing elit. Iure, <i>texto em italico em i </i>consectetur.adipisci!</p>
+    
+</body>
+</html>
