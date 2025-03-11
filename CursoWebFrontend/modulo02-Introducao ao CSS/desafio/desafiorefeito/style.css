@@ -1,6 +1,6 @@
 body{
      font-family: Arial, Helvetica, sans-serif;
-     width: 80%;
+     width: 90%;
      margin: auto;
 }
 h1{
@@ -8,13 +8,17 @@ h1{
      color: rgb(18, 18, 104);
      padding: 5px;
      text-align: center;
-     font-weight: bolder;
+     font-size: 46px;
+    /* width: 50%;
+     margin: auto;*/
 }
 h2{
      background-color: rgb(162, 162, 175);
      color: rgb(26, 26, 80);
      padding: 5px;
      border-bottom: 1px solid black;
+     margin-top: 48px;
+     margin-bottom: 12px;
 }
 #principal{
      text-align: center;
@@ -24,7 +28,41 @@ h4{
      font-weight: bolder;
      color: gray;
 }
-ul li{
-     background-color: green;
+ul{
+     
+     padding-left: 0;
 
+}
+li{
+     list-style-position: inside;
+}
+a{
+     text-decoration: none;
+}
+a:hover{
+     text-decoration: underline;
+}
+.menu{
+    
+     text-align: right;
+     
+     
+}
+.menu li{
+    
+     display: inline-block;
+     list-style-type: none;
+     
+
+
+}
+.menu a {
+     background-color: rgb(104, 103, 103);
+     padding: 16px;
+     display: inline-block;
+}
+.menu a:hover{
+     background-color: rgb(221, 221, 221);
+     color: white;
+     text-decoration: none;
 }
