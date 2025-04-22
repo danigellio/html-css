@@ -1,0 +1,48 @@
+ul{
+     
+     padding: 0;
+     margin: 0;
+     background-color: rgb(0, 0, 0);
+     list-style-type: none;
+     overflow: hidden;
+     
+}
+li{
+     float: left;
+     
+     
+    
+}
+li a, .drop-btn {
+     display: inline-block;
+     color: white;
+     text-decoration: none;
+     padding: 14px 16px;
+     background: rgb(47, 47, 82);
+     text-align: center;
+     
+}
+li a:hover, .drop:hover .drop-btn{ /*aqui deixar o link acima sempre acesso*/
+     background-color: #809097;
+}
+li.drop{
+     display: inline-block;
+}
+.drop-content{
+     display: none;
+     position: absolute; /*vai se comportar em relacai ao pai, ou seja a li*/
+     background-color: blueviolet;
+     width: 150px;
+     
+}
+.drop-content a {
+     color: black;
+     display: block;
+     text-align: left;
+     background-color: rgb(42, 56, 100);
+
+}
+.drop:hover .drop-content{
+     display: block; /*significa que a li que tem a div*/
+
+}
