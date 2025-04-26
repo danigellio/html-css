@@ -28,6 +28,7 @@ body{
 .list{
      list-style-type: none;
      padding: 0;
+     margin: 0;
 }
 .list-item{
      display: flex;
@@ -51,4 +52,19 @@ body{
 .list-item__email{
      margin: 5px 0 0;
      
+}
+.list-item__action{
+     
+     display: flex;
+     align-items: center;
+     gap:16px;
+     opacity:0 ;
+     
+}
+.list-item:hover{
+     background-color: #eee;
+    
+}
+.list-item:hover .list-item__action{
+     opacity: .3;
 }
