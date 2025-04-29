@@ -1,0 +1,10 @@
+.container{
+     background-color: lightsalmon;
+     display: flex;
+}
+.item{
+     background-color: lightblue;
+     border: 1px solid black;
+     flex: auto;/* ele se adpta , aumenta e diminui*/
+
+}
