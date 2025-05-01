@@ -1,14 +1,19 @@
 .container{
      background-color: lightsalmon;
      display: flex;
-     flex-direction: column;
+     flex-direction: row;
+     flex-wrap: wrap;/*qebra de linha*/
+     flex-flow: row wrap;/*junçao do direction e flow. direçao e empacotamento*/
+     
 
 }
 .item{
      background-color: lightblue;
      border: 1px solid black;
      text-align: center;
-     width: 20px;
+     flex:auto; /*so no filho, ele nao permieespaço em brano*/
+    
+     
      
 
 }
