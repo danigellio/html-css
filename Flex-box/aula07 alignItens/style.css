@@ -1,0 +1,33 @@
+.container{
+     background-color: lightsalmon;
+     display: flex;
+     flex-flow: row wrap;
+     align-items: flex-start; /*para geral,padrao e strech e depois configura um  a um com align-self que é so pra filho*/
+     height: 400px;
+     
+     
+    
+     
+
+}
+.item{
+     background-color: lightblue;
+     border: 1px solid black;
+     text-align: center;
+     padding: 40px;   
+
+}
+#i1{
+     align-self: center; 
+
+}
+#i3{
+     align-self: auto;/*herda a configuraçao do pai*/
+
+}
+#i6{
+     align-self: flex-end;
+}
+#i7{
+     align-self: stretch;
+}
