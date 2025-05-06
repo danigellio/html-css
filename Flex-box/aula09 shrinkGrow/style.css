@@ -17,15 +17,24 @@
     
 
 }
+/*substitua por FLEX: 1 1 AUTO; OU o valor q desejar
+GROW, SHRINKE BASIS*/
 #cxa{
 flex-shrink: 1;
 flex-grow: 0;
+flex-basis: 200px;
+/*flex: 0 1 200px; ou seja primeiro GROW,SHRINK BASIS*/
 }
 #cxb{
 flex-shrink: 1;
 flex-grow: 1;
+flex-basis: 200px;
 }
 #cxc{
 flex-shrink: 0;
 flex-grow: 0;
+flex-basis: auto;
+/*vc pode substituir oq eu RECOMENDADO por
+flex: 0 0 auto*/
 }
+/*se vc colocar flex: 3; ele funciona somente para grow, o resto fica padrao automatico ou seja, flex: 3 1 auto;
