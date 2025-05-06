@@ -22,11 +22,11 @@ header{
      align-items: center;
 }
 h1{
-     border: 2px solid black;
+     
      flex: 0 0 200px;
 }
 nav{
-     border: 2px solid black;
+    
      display: flex;
      flex-flow: row wrap;
      justify-items: self-end;
@@ -36,8 +36,13 @@ header > nav > a{
      color: white;
      padding: 5px;
      border-radius: 5px;
+     margin:1px;
      
-     
+}
+header > nav > a:hover{
+     background-color: white;
+     color: black;
+     transition: background-color .5s;
 }
 main{
      background-color: white;
