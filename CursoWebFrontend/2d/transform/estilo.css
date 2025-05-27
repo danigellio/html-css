@@ -1,0 +1,31 @@
+
+body{
+     margin-bottom: 100vh;
+}
+div{
+     outline: 1px solid #888;
+     width: 200px;
+     margin:  .5em auto;
+}
+p{
+     width: 50%;
+}
+.destaque{
+     background-color: yellow;
+}
+.div1 .destaque{
+     transform: translate(50%);
+}
+.div2 .destaque{
+     position: relative;
+     left: 25%;
+}
+.div3 .destaque{
+     transform: rotate(45deg);
+}
+.div4 .destaque{
+     transform: scale(2);
+}
+.div5 .destaque{
+     transform: skew(25deg);
+}
