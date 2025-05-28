@@ -1,0 +1,35 @@
+.chk1{
+     display: none;
+}
+
+
+label span{
+     display: inline-block;
+     font-size: 26px;
+     width: 1em;
+     height: 1em;
+     background-color: greenyellow;
+   
+
+}
+.chk1:checked+label span{
+     background-color: blue;
+     position: relative;
+     
+}
+
+
+.chk1:checked+label span::before{
+     content: "";
+     display: block;
+     position: absolute;
+     border: .097em solid rgb(255, 255, 255);/*eu dividi 2divido por 26px do font size*/
+     top: .077em ; 
+     left: .38em;
+     right: .3em; /*aqui divide 8 por 26*/
+     bottom: .3em;
+     transform: rotate(46deg);
+     border-left-color:transparent ;
+     border-top-color: transparent;
+
+}
