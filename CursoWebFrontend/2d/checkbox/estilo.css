@@ -1,3 +1,6 @@
+body{
+     margin-bottom: 500px;
+}
 .chk1{
      display: none;
 }
@@ -8,12 +11,15 @@ label span{
      font-size: 26px;
      width: 1em;
      height: 1em;
-     background-color: greenyellow;
+     background-color: rgb(222, 222, 223);
    
 
 }
+
+
+
 .chk1:checked+label span{
-     background-color: blue;
+     background-color: lightblue;
      position: relative;
      
 }
@@ -32,4 +38,152 @@ label span{
      border-left-color:transparent ;
      border-top-color: transparent;
 
+}
+
+
+.lbl2 span{
+     display: inline-block;
+     font-size: 20px;
+     width: 1em;
+     height: 1em;
+     background-color: lightcoral;
+
+}
+.lbl2 input[type=checkbox]:checked + span{
+     background-color: lightgreen;
+     position: relative;
+}
+
+.lbl2 input[type="checkbox"]:checked+span::before{
+      content: "";
+     display: block;
+     position: absolute;
+     border: .097em solid rgb(255, 255, 255);/*eu dividi 2divido por 26px do font size*/
+     top: .077em ; 
+     left: .38em;
+     right: .3em; /*aqui divide 8 por 26*/
+     bottom: .3em;
+     transform: rotate(46deg);
+     border-left-color:transparent ;
+     border-top-color: transparent;
+}
+
+
+.lbl3 span{
+     display: inline-block;
+     font-size: 20px;
+     width: 1em;
+     height: 1em;
+     background-color: lightcoral;
+     position: relative;
+     transition: background-color .2;
+
+}
+.lbl3 input[type=checkbox]:checked+span{
+     background-color: lightgreen;
+     
+}
+
+.lbl3 input[type="checkbox"]+span::before{
+      content: "";
+     display: block;
+     position: absolute;
+     border: .097em solid rgb(255, 255, 255);/*eu dividi 2divido por 26px do font size*/
+     top: .077em ; 
+     left: .38em;
+     right: .3em; /*aqui divide 8 por 26*/
+     bottom: .3em;
+     transform: rotate(46deg);
+     border-left-color:transparent ;
+     border-top-color: transparent;
+     opacity: 0;
+     transition: all .5s;
+}
+/*para ele aparecer o V*/
+.lbl3 input[type="checkbox"]:checked+span::before
+{
+     opacity: 1;
+}
+
+/*para esconder o quadradinho do checkbox*/
+.lbl3 input[type="checkbox"]{ 
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: 0;
+     overflow: hidden;
+     position: absolute       ;
+     outline: none;
+}
+/*para esconder o quadradinho do checkbox e deixar borda quando usa tab*/
+.lbl3 input[type="checkbox"]:focus+span{
+     outline: 2px solid rgba(0, 0, 0, 0.507);
+     box-sizing: border-box;
+     outline-offset:1px ; /*pode ser -2 é a borda quando usa tab*/
+}
+
+
+/*outro botao*/
+.lbl4{
+     --switch-color: #9ca59f;
+     --time:  .2s ;
+}
+.lbl4 span{
+     display: inline-block;
+     width: 2em; /*largura, por isso no after temos 1em 1 em e 50% para ficar na metade*/
+     height: 1em;
+     border-radius: 1em ;
+     outline: 2px solid var(--switch-color);
+     overflow: hidden;
+     position: relative;
+
+     
+}
+
+.lbl4 span::after{
+     content: '';
+     display: block;
+     width: 1em;
+     height: 1em;
+     border-radius: 50%;
+     background-color: rgb(0, 38, 255);
+     transition: all .2s ease-in-out;/* ease -in out, comeca devagar acerela e depois diminui*/
+     transform: translateX(0);
+     
+}
+.lbl4 input:checked+span::after{
+     transform: translateX(100%);
+
+
+}
+.lbl4 span::before{
+     content: '';
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+     background-color: var(--switch-color);
+     transform: translateX(-100%);
+     transition: transform .2s ease-in-out;
+     position: absolute;
+}
+
+.lbl4 input:checked+span::before{
+     transform: translateX(0);
+     
+
+}
+.lbl4 input[type="checkbox"]{ 
+     width: 0px;
+     height: 0px;
+     padding: 0;
+     margin: 0;
+     overflow: hidden;
+     position: absolute       ;
+     outline: none;
+}
+/*para esconder o quadradinho do checkbox e deixar borda quando usa tab*/
+.lbl4 input[type="checkbox"]:focus+span{
+     outline: 2px solid rgba(0, 0, 0, 0.507);
+     box-sizing: border-box;
+     outline-offset:1px ; /*pode ser -2 é a borda quando usa tab*/
 }
