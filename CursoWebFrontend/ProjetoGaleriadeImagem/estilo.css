@@ -1,0 +1,41 @@
+*, *::after, *::before{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+
+}
+body{
+     font-family: sans-serif;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     background-color: lightcoral;
+     
+}
+img{
+     max-width: 100%;
+}
+.gallery{
+     width: 60rem;
+     display: flex;
+     flex-wrap: wrap;
+     gap: .5em;
+     background-color: white;
+     justify-content: space-between;
+
+}
+
+.gallery .image{
+     flex-basis: 24%;/*25% - .5em)*/
+     outline: 2px solid red;
+}
+.gallery p{
+     background-color: rgba(0, 0, 0, .8);
+     color: white;
+     text-transform: uppercase;
+     padding: 1em;
+     letter-spacing: 2px;
+     font-size: .75em;
+}
