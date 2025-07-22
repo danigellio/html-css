@@ -101,6 +101,70 @@ section{
 .cores:nth-of-type(11){
     background-image: radial-gradient(farthest-side at 50px 20px, blue, red);
     /*o lado mais longe*/
-    /*pode por (circle farthest....)
+    /*pode por (circle farthest....)*/
+}
+/*gradiente conico*/
+.cores:nth-of-type(12){
+    background-image: conic-gradient(green, blue);
+}
+.cores:nth-of-type(12){
+    background-image: conic-gradient(from 45deg 
+    ,green, blue, yellow,red);
+    /*(... green 70%, ...) pode por tbem %*/
+}
+.cores:nth-of-type(13){
+    background-image: conic-gradient(#f00,#ff0,#0f0,#0ff,#00f,#f0f, #f00);
+    
+}
+.cores:nth-of-type(14){
+    background-image: conic-gradient(#f00,#ff0,#0f0,#0ff,#00f,#f0f, #f00);
+    filter:hue-rotate(90deg); /*para rotacionar*/
+}
 
+.cores:nth-of-type(15){
+    background-image: conic-gradient(#f00,#ff0,#0f0,#0ff,#00f,#f0f, #f00);
+    filter:blur(10px); /*para desfocar*/
+}
+
+/*para girar*/
+.cores:nth-of-type(16){
+    background-image: conic-gradient(#f00,#ff0,#0f0,#0ff,#00f,#f0f, #f00);
+   transition: filter 5s linear; /*linear para nao acelerar*/
+   aspect-ratio: 16 / 9 ; /*aumenta fica tamanho tela 16.9 ou somente 1 e fica quadrado*/
+}
+.cores:nth-of-type(16):hover{
+    
+    filter:hue-rotate(2turn); /*ou360deg ou3600deg*/
+}
+/*---*/
+
+/*repeticão de gradiente*/
+.cores:nth-of-type(17){
+    background-image: repeating-linear-gradient(to top right,white, black);
+  
+}
+.cores:nth-of-type(18){
+    background-image: repeating-linear-gradient(to top right,white 0%, black 5%);/*poder ser 0px e 5px*/
+  
+}
+/*repetição de gradiente radial e cônico*/
+.cores:nth-of-type(19){
+    background-image: repeating-linear-gradient(white 0px, black 10px, white 20px, black 10px);
+  
+}
+.cores:nth-of-type(20){
+    background-image:
+     repeating-conic-gradient(white 0deg, black 10deg, white 20deg, black 10deg); /*deve ser em deg*/
+
+     /*drop-shadorw vs box-shadow*/
+     
+  
+}
+.cores:nth-of-type(21){
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, .8);
+  
+}
+.cores:nth-of-type(19){
+   filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, .8)); /*ideal para quando temos desenhos, pois ele contorna tudo, texto, borda, alguma imagem etc, ja o box-shadow so contorna o elemente em si..*/
+  
 }

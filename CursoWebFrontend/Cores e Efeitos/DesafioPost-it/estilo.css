@@ -1,0 +1,22 @@
+
+
+body{
+     background-color: lightcoral;
+     
+}
+h1{
+     text-align: center;
+     color: white;
+
+}
+
+section{
+     display: flex;
+     width:90% ;
+     flex-wrap: wrap;
+     
+}
+div{
+     background-color: white;
+     width:400px ;
+}
