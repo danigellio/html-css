@@ -50,6 +50,57 @@ section{
     /*selecionei o 2 filho*/
     background-color: white;
     background-clip: content-box;
+    
     /*padding-box: começa a partir do padding
     content-box: coloca somente no conteudo*/
+}
+.cores:nth-of-type(3){
+    background-color: hsl(50deg, 60%, 50%);
+    box-shadow: 10px 10px 6px hsl(100deg, 100%, 50%) inset;
+}
+
+/*mais tipo de linear gradiente*/
+.cores:nth-of-type(4){
+    background-image: linear-gradient(70deg, blue, transparent),
+    linear-gradient(to top, red, transparent);
+    background-clip: content-box, padding-box;
+}
+/*gradiente radial*/
+.cores:nth-of-type(5){
+    background-image: radial-gradient(blue, red);/*pode ter mais cores, pode ter exemplo (green50%, yellow, pink, blue 10%)*/
+
+}
+.cores:nth-of-type(6){
+    background-image: radial-gradient(circle, blue, red);/*por padrao ele é ellipse, circle significa q comeca no centro*/
+
+}
+/*mudando as posiçao do gradiente*/
+.cores:nth-of-type(7){
+    background-image: radial-gradient(circle at left, blue, red);
+    /*left top etc...
+    background-image: radial-gradient(circle at 10% 50%, blue, red); 10% do azul no eixo e 50%no eixo, pode ser em px
+    .. pode ser somente(at 50px 20px, blue, green) pois o padrao e ellipse e fica assim.*/
+
+}
+/*closest e farthest*/
+.cores:nth-of-type(8){
+    background-image: radial-gradient(closest-corner at 50px 20px, blue, red);
+    /*fica perto do ponto mais proximo*/
+
+}
+.cores:nth-of-type(9){
+    background-image: radial-gradient(farthest-corner at 50px 20px, blue, red);
+    /*fica mais longe do ponto mais perto*/
+
+}
+.cores:nth-of-type(10){
+    background-image: radial-gradient(closest-side at 50px 20px, blue, red);
+    /*o lado mais perto*/
+
+}
+.cores:nth-of-type(11){
+    background-image: radial-gradient(farthest-side at 50px 20px, blue, red);
+    /*o lado mais longe*/
+    /*pode por (circle farthest....)
+
 }
