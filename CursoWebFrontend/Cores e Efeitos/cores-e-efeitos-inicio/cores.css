@@ -1,0 +1,55 @@
+
+/*caiuse.com mix color*/
+:root{
+    --primary-color:#e10f0f;
+}
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, transparent, blue), url(imagens/tile.png);
+/*posso colocar (transparent 50%, green 60%, blue)*/
+/*posso mudar a diferçao : linear-gradiente(to left, red,blue) ou to top left ou to top right, ou com angulos, 90deg ou 72deg , posso ter (to top, rgba(0, 0, 255, .5) ou rgb( 0 0 255 / .5) etc..*/
+
+    background-attachment: fixed, scroll; /*imagem de fundo fica fixa, neste caso a cor esta fixada, e a imagem esta scrolando. se eu deixasse somente fixed,a imagem e cor ficaria fixa*/
+
+    background-blend-mode: color; /*aqui voce consegue mesclar a cor com a imagem*/
+}
+.cores{
+    --teste:#f00;
+    --color: color-mix(in srgb, var(--teste), transparent);
+     /*criamos uma variavel com color-mix, fazendo isso podemos usar no border, pq nao funiona completamente no border*/
+    background-color: var(--color);
+
+
+    width: 80%;
+    border: 8px dashed color-mix(in srgb, blue 50%, green 90%);/* fica um mix de cor, tem tbm in lsh*/
+    /*border: 8px dashed var(--color) com variavel color-mix*/
+    /*background-color: color-mix(in srgb, var(--teste), transparent); */ /*podemos fazer assim*/
+    margin: 20px auto;
+    padding: 20px;
+
+}
+.cores p {
+    margin: 0;
+}
+
+section{
+    counter-reset: contador;
+}
+.cores{
+    counter-increment: contador;
+
+}
+
+.cores::before{
+    content:"[" counter(contador) "]"; /*quando abre e fecha parentes e funcao. o counter deve ser sem aspas. pq aspas é texto*/
+    margin-bottom: 16px;
+    font-weight: bolder;
+    
+}
+.cores:nth-of-type(2){
+    /*selecionei o 2 filho*/
+    background-color: white;
+    background-clip: content-box;
+    /*padding-box: começa a partir do padding
+    content-box: coloca somente no conteudo*/
+}
