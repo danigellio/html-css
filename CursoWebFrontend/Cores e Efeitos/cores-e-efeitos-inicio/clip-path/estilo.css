@@ -1,0 +1,69 @@
+/*SITE QUE FAZ CLIP PATH
+https://bennettfeely.com/clippy/
+*/
+
+body{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: lightcoral;
+     
+}
+
+
+.card_title{
+     margin: 0;
+     font-weight: lighter;/*tira o negrito*/
+}
+
+.card{
+     
+    
+     width: 300px;
+     background-color: wheat;
+  
+    padding: 40px 30px 30px 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card::before{
+     content: "";
+     display: block;
+     width: 34px;
+     height: 34px;
+    
+     position: absolute;
+     top: 0;
+     left: 0;
+    
+
+
+}
+.exemplo{
+     width: 30px;
+     height: 30px;
+     background-color: yellow;
+     border-top: 5px solid black;
+}
+.clippath > div{
+     width: 300px;
+     height: 300px;
+     margin: 30px;
+     background-image: repeating-linear-gradient(45deg, yellow 10%, orange 20%);
+
+}
+#d1{
+     clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 20% 20%); /*0% é o ponto esqerdo superior, o primeiro e valor de Y e o 100%em diante é valor de 0*/
+}
+#d2{
+     clip-path: circle(50% at center); /*fica um circulo, pode ser outro valor 100px etc..
+     circle(50% at 50% 20px).. circle(50% at center top).. circle(50% at center 25%) PRIMEIRO VALOR E SEMPRE NA HORIZONTO O SEGUNDO E VERTICAL*/
+}
+#d3{
+     clip-path: ellipse(50% 40% at center); /*pode ser em px*/
+}
+#d4{
+     clip-path: inset(20px 30px 40px 50px );/*distancia que estou indo pra dentro, que estou diminuindo*/
+}
+#d5{
+     clip-path: inset(30px round 50px); /*fica os cantos arredondados (30px round 50px 20px 10px 25%) outro explemplo (30px round 50px 20px 10px 25% / 20px 50px)pode ser com porcentagem junto */
+}

@@ -1,22 +1,81 @@
-
-
 body{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      background-color: lightcoral;
      
 }
 h1{
      text-align: center;
-     color: white;
-
+     font-size: 48px;
+     font-weight: lighter;/*tira o negrito*/
 }
 
-section{
-     display: flex;
-     width:90% ;
-     flex-wrap: wrap;
+.card_title{
+     margin: 0;
+     font-weight: lighter;/*tira o negrito*/
+}
+/*.card{
+     width: 350px;
+/*para fazer o desenho da div
+    background-image: linear-gradient(135deg,  transparent 25px, white 25px);
+    filter: drop-shadow(0 0 5px black);
+    padding: 40px 30px 30px 50px;
+    box-sizing: border-box;
+}
+*/
+
+/*
+.card{
+     width: 350px;
+/*para fazer o desenho da div
+    background-image: 
+    linear-gradient(135deg, transparent 25px, rgb(206, 206, 206) 25px),
+    linear-gradient(135deg,  transparent 25px, white 25px);
+
+     background-size: 34px 34px, 100%;
+     /*pega o primeiro background-img, depois o segundo back..
+
+    background-repeat: no-repeat; 
+    retirando a repeticao
+    
+    filter: drop-shadow(0 0 5px black);
+    padding: 40px 30px 30px 50px;
+    box-sizing: border-box;
+}*/
+
+.card{
      
+     /*flex-basis: calc(33% - 25px);/*esses 25px é do gap, para caber certo no container*/
+     flex-grow: 1; /*pode crescer e ocupar o espaço que sobre*/
+ 
+     flex-basis: clamp(300px, calc(33% - 25px) , 400px); /*no minimo os cards vao ter 300px , depois o idel é o calc, e depois no maximo 400px*/
+    background-image: linear-gradient(135deg,  transparent 25px, white 25px);    
+    filter: drop-shadow(0 0 5px black);
+    padding: 40px 30px 30px 50px;
+    box-sizing: border-box;
+    position: relative;
 }
-div{
-     background-color: white;
-     width:400px ;
+
+.card::before{
+     content: "";
+     display: block;
+     width: 34px;
+     height: 34px;
+    
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-image: linear-gradient(135deg, transparent 25px, rgb(206, 206, 206) 25px);
+     filter:drop-shadow(2px 2px 3px rgba(0,0,0,.3));
+
+
+}
+.cards-container{
+     display: flex;
+     gap: 25px;
+     flex-wrap: wrap;
+     width: 80%;
+     margin: 0 auto;
+     outline: 2px solid black;
+     
+     
 }
