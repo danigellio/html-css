@@ -1,0 +1,23 @@
+ /*@media print{ 
+ aplicado quando for para  impressao
+               body{
+                    color: black;
+                    font-family: serif;/*usado para impressao
+               }
+
+          }
+
+*/
+
+
+/*colocando assim ele funciona pq esta mais especifico que o body normal que esta no style html*/
+.only-print{ 
+     color: black;
+                    font-family: serif;
+}
+
+a::after{
+     content: attr(href) ; /*mostra o endereço do link e o title*/
+     display: inline-block;
+     margin-left: 8px;
+}
