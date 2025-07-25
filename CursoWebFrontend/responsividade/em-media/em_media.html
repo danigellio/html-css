@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Unidades de medida</title>
+
+     <style>
+          html{
+               /*font-size: 32px;*/
+          }
+          body{
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               
+
+          }
+
+          h1,h2{
+               font-weight: lighter;
+          }
+
+          div{
+               outline: 2px solid red;
+               min-height: 80px;
+               
+          }
+
+          div:nth-of-type(1) {
+               background-color: rgb(220, 255, 93);
+               font-size: 16px;
+               padding: 16px;
+          }
+           div:nth-of-type(1) b{
+               font-size: 24px;
+          }
+
+
+           div:nth-of-type(2) {
+               background-color: rgb(93, 117, 255);
+               font-size: 1em;
+               padding: 1em;
+          }
+           div:nth-of-type(2) b{
+               font-size: 1.5em;
+          }
+
+           div:nth-of-type(3) {
+               background-color: rgb(93, 117, 255);
+               font-size: 1rem;
+               padding: 1em;
+          }
+           div:nth-of-type() b{
+               font-size: 1.5rem;
+          }
+ /*era 870px ai vc divide por 16px que dara o valor de 53.75em*/
+          @media screen and (min-width: 53.75em) {
+               body{
+                    background-color: coral;
+               }
+          }
+
+     </style>
+</head>
+<body>
+     <h1>Unidades de medida em projeto responsivos</h1>
+     <h2>Pixels</h2>
+     <div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, temporibus?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quidem laboriosam ex accusamus <b>Lorem, ipsum dolor.</b> tempore ab distinctio laborum atque doloremque a!</p>
+
+     </div>
+
+     <h2>Em</h2>
+     <div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, temporibus?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quidem laboriosam ex accusamus <b>Lorem, ipsum dolor.</b> tempore ab distinctio laborum atque doloremque a!</p>
+     </div>
+
+     <h2>Rem</h2>
+     <div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, temporibus?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quidem laboriosam ex  <b>Lorem, ipsum dolor.</b> tempore ab distinctio laborum atque doloremque a!</p>
+     </div>
+</body>
+</html>
