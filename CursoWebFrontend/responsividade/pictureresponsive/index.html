@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          img{
+               max-width: 100%;
+          }
+     </style>
+</head>
+<body>
+     
+     <img src="rwd-images/1280.jpg" alt="lorem" srcset="rwd-images/960.jpg 960w, rwd-images/640.jpg 640w, rwd-images/480.jpg 480w"  sizes="33vw"> <!--33significa o tamanho da imagem na tela
+     -- sempre colocar em order 'sizes="(min-width:900px) 33vw,  (min-width:600px) 50vw deve ser sempre na ordem que deseja que abra, o browser pensa assim, imagine q esteja no tamanho de tela  de 400, entao ele ve 'émaior que 900 ?nao, é maior que 600? nao , entao ele coloca 100 pq esse nao tem nenhuma condição. igual se nao tiver os 100, ele pensa, vc esta tela de 800, entao é maior que 600? sim, entao ele ja para ali, e mesmo q aumente ele nao muda pra 900'-->
+     <hr>
+
+     <picture>
+          <!--importante a ordem-->
+          <!--ele olha a condicao primeiro se for maior que 900-->
+          <source media="(min-width:900px )" srcset="rwd-images/1280.jpg 1280w, rwd-images/960.jpg 960w, rwd-images/640.jpg 640w" sizes="33vw">
+
+          <source media="(min-width: 600px )" srcset="rwd-images/1280.jpg 1280w, rwd-images/960.jpg 960w, rwd-images/640.jpg 640w" sizes="50vw">
+
+          <img src="rwd-images/1280.jpg" alt="imagem alternativa">
+     </picture>
+</body>
+</html>
