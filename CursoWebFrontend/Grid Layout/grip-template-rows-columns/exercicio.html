@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Exercicio</title>
+     <style>
+          .gridContainer{
+               width: 100vw;
+               height: 100vh;
+          }
+          .gridItem {
+               background-color: orange;
+               padding: 15px;
+               font-family: sans-serif;
+          }
+          /*GRID*/
+          .gridContainer{
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               grid-template-rows: 75px 50px  1fr 50px; /*header, nav conteudo e footer*/
+               gap: 1em;
+
+               
+          }
+          .header{
+               grid-column: 1 / -1;
+               /*ela começa no 1 e vai ate a ultima, ou seja ocupa espaço todo*/
+          }
+          .nav{
+               grid-column: 1 / -2;/*vai do um ate o pnoutimo*/
+          }
+          .aside{
+               grid-row:  2 / -1;
+               grid-column: 3 / -1;
+               /*podemos colocar index:1; para ele ficar sobre o footer*/
+          }
+          .main{
+               grid-column: 1 / 3; /*ou menos -2*/
+
+          }
+          .footer{
+               grid-column: 1 / -1;
+               grid-row: 4 / 5;
+               background-color: rgba(0, 0, 0, .5)
+          }
+     </style>
+</head>
+<body>
+     <div class="gridContainer">
+          <header class="header gridItem">Header</header>
+          <nav class="nav gridItem">Nav</nav>
+          <aside class="aside gridItem">Aside</aside>
+          <main class="main gridItem">
+               main
+          </main>
+          <footer class="footer gridItem">Footer</footer>
+     </div>
+</body>
+</html>

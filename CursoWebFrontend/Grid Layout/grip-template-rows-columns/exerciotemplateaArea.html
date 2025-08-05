@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Exercicio</title>
+     <style>
+          .gridContainer{
+               width: 100vw;
+               height: 100vh;
+          }
+          .gridItem {
+               background-color: orange;
+               padding: 15px;
+               font-family: sans-serif;
+          }
+          /*GRID*/
+          .gridContainer{
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               grid-template-rows: 75px 50px  1fr 50px; /*header, nav conteudo e footer*/
+               gap: 1em;
+
+/*tem que ter o mesmo tanto de linha e coluna*/
+             /*  grid-template-areas: 
+               ".        header     header"
+               "nav      nav        . "
+               "main      main      aside"
+               "footer   footer    footer";
+               /*quando vc coloca um ponto, significa que vai ficar vazio*/
+
+               /*atalho para grid-template-area*/
+               grid-template: 
+               ".        header     header" 75px
+               "nav      nav        . " 50px
+               "main      main      aside" 1fr
+               "footer   footer    footer" 50px
+               / 1fr 1fr 1fr;
+               
+          }
+          .header{
+              /* grid-area: header;*/
+              grid-column: header-star / header-end;
+              /*ou  somente grid-column: header*/
+          }
+         .nav{
+          /*grid-area: nav;*/
+          grid-column: nav-start /  nav-end;
+          /*ou  somente grid-column: nav*/
+         }
+         .aside{
+          /*grid-area: aside;*/
+          grid-column: aside-start / aside-end;
+          grid-row: aside-start / aside-end;
+          /*ou  somente grid-column: aside*/
+          /*ou  somente grid-row: aside*/
+         }
+         .main{
+          /*grid-area:main;*/
+          grid-column: main-start / main-end;
+          /*ou  somente grid-column: main*/
+
+         }
+         .footer{
+          /*grid-area:footer;*/
+          grid-column: footer-start / footer-end;
+          /*ou  somente grid-column: footer*/
+         }
+     </style>
+</head>
+<body>
+     <div class="gridContainer">
+          <header class="header gridItem">Header</header>
+          <nav class="nav gridItem">Nav</nav>
+          <aside class="aside gridItem">Aside</aside>
+          <main class="main gridItem">
+               main
+          </main>
+          <footer class="footer gridItem">Footer</footer>
+     </div>
+</body>
+</html>

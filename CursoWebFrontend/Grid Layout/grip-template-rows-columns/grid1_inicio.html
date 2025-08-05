@@ -45,7 +45,31 @@
         }
         .gridItem:nth-child(1){
             background-color: yellow;
-            grid
+           /* grid-row-start: 1;
+            grid-row-end: 2;*/
+            grid-row: 1 / 2;/*atalho*/
+            /*grid-column: 1 / -1;*/
+            grid-column-start: 1;
+            grid-column-end: -2;/*pode ser -2 por exemplo*/
+            /*aqui ele mescla, vai da coluna 1 ate a 3, as linhas 1 e 2*/
+        }
+        .gridItem:nth-child(5){
+            grid-row: 1 /-1; /*comeca na um e vai ate a ultima*/
+            grid-column: 4 /-1;
+            /*poremos colocar somente 4, pq por padrao ele expande 1, e so temos mais uma coluna que e -1*/
+        }
+        .gridItem:nth-child(6){
+            grid-column: 1 / span 3; /*ela espande 3x
+            , podemos colocor somente span3, pq por padrao ele comeca com 1*/
+        }
+
+        .gridItem:nth-child(4){
+            grid-area: 2 / 3 /-1 / 4;
+            /*atalho para   grid row start
+                            grid column star
+                            grid row end
+                            grid column end*/
+            
         }
     </style>
 </head>
