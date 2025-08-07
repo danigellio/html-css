@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Grid lines nomeadas</title>
+     <style>
+          .gridContainer{
+               display: grid;
+               width: 90%;
+               
+               background-color: #ccc;
+               gap: 10px;
+
+               grid-template-rows: 100px 100px; /*linhas*/
+               grid-auto-rows: 200px;
+               /*as altura das linhas q sao gerados implicitamente tem 200px
+               grid-auto-rows: 200px 100px; fica colunas 200 100 200 100 e assim vai
+
+
+               */
+
+               grid-auto-flow: column; /* o padrao é ROW, mas agora é coluna*/
+
+               grid-auto-columns: 50px 100px; /*eu mudo o valor das colunas*/
+          }
+          .gridItem {
+               background-color: orange;
+               padding: 15px;
+               font-family: sans-serif;
+          }
+         
+         
+     </style>
+</head>
+<body>
+     <div class="gridContainer">
+          
+          <div class="gridItem">1</div>
+          <div class="gridItem">2</div>
+          <div class="gridItem">3</div>
+          <div class="gridItem">4</div>
+          <div class="gridItem">5</div>
+          <div class="gridItem">6</div>
+          <div class="gridItem">7</div>
+          <div class="gridItem">8</div>
+          
+          
+     </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body{
+     font-family: sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;/*Garante que o body sempre ocupe no mínimo a altura inteira da tela.*/
+     margin: 0;
+     background-image: linear-gradient(#5d61f2, #27296b);
+}
+.calculator{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows:80px repeat(5, 60px) ;/*primeiro linha tem 80 o restantante tem 60*/
+
+     width: 300px;
+     padding: 20px;
+     background-image: linear-gradient(#5981a4, #2b4772);
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, .8) ;
+     gap: .5em;
+}
+#display, button{
+     background-image: linear-gradient(#353535, #1b1717);
+     color: white;
+
+}
+#display{
+     
+     box-shadow: inset 3px 3px 0 #161616;
+     font-size: 2em;
+     margin-bottom: 20px;
+     padding: 6px;
+
+     grid-column: 1 / -1;
+     display: flex;
+     align-items: center;
+     justify-content: flex-end;
+
+}
+button{
+     border: 2px solid black;
+     border-left-color: #8a8a8a;
+     border-top-color: #8a8a8a;
+     font-size: 1em;
+
+}
+.span-row-2{ /*colocamos assim pq o nme da classe é generica*/
+     /*grid-row: 5 / 7;
+     grid-column: 4 / 5;*/
+
+     grid-row: span 2;
+}
+.span-column-2{
+     grid-column: span 2;
+}
