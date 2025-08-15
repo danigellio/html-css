@@ -1,0 +1,38 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     background-color: lightblue;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     width: 100vw;
+     height: 100vh;
+     position: relative;
+}
+h1{
+     margin-left: 2rem ;
+     padding-top: 1rem;
+}
+.menu-hamburguer{
+     position: absolute;
+     top: 40px;
+     right: 40px;
+
+}
+.menu-icon{
+     width: 35px;
+     height: 30px;
+     
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+.linha{
+     height: 4px;
+     background-color: black;
+     border-radius: 2px;
+}
