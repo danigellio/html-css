@@ -1,0 +1,64 @@
+body{
+     background-color: bisque;
+     margin-bottom: 100vh;
+}
+.cena{
+     border: 2px solid #ccc;
+     width: 300px;
+     aspect-ratio: 1;/*mesma altura e lagura igual*/
+     margin: 80px;
+}
+
+.plano{
+     background-color: lightcoral;
+
+}
+#cena1{
+     perspective: 400px;
+}
+#cena1 .plano{
+     width: 200px;
+     margin: 50px;
+     height: 200px;/*ou aspect-radio:1*/
+     transform: rotateY(45deg);
+
+}
+
+
+#cena2 .plano{
+     width: 200px;
+     margin: 50px;
+     height: 200px;/*ou aspect-radio:1*/
+     transform:perspective(400px) rotateY(45deg); /*podemos ou colocar na div pai, ou fazer tudo junto no filho*/
+
+}
+/*cena3*/
+#cena3{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     
+}
+#cena3 .plano{
+     margin: 1rem;
+}
+/*cena4*/
+#cena4{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     
+}
+#cena4 .plano{
+     margin: 1rem;
+}
+
+#cena3{
+     perspective: 600px;
+     perspective-origin: left top; /*50% 50%*/
+}
+#cena3 .plano{
+     transform: rotateY(45deg);
+     
+}
+#cena4 .plano{
+     transform: perspective(600px) rotateY(45deg);
+}
