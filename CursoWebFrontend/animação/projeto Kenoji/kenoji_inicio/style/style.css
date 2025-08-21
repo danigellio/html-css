@@ -4,7 +4,12 @@ body {
     margin: 0;
     
     background-image: radial-gradient(ellipse at 0 0, #fff8ce, #ffb61d);
-    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+
 }
 
 #wrapper {
@@ -14,11 +19,12 @@ body {
 }
 
 header {
-    padding: 50px 0;
+    padding: 30px 0;
 }
 
 h1 {
     font-size: 48px;
+    line-height: 1.5;
 }
 
 h1 strong {
@@ -28,10 +34,11 @@ h1 strong {
 
 main {
     display: flex;
+    justify-content: center;
     gap: 2rem;
 }
 
-main>* {
+main > * {
     /* flex-grow: 1;
     flex-basis: 0; */
     flex: 1 0 0;
@@ -73,9 +80,77 @@ form input[type="text"]::placeholder {
 
 .animation {
     position: relative;
+    
+    
+    
 }
 
 .animation img {
     position: absolute;
 }
-
+/*Primeiro valor → eixo X (horizontal)
+positivo: move para direita
+negativo: move para esquerda
+Segundo valor → eixo Y (vertical)
+positivo: move para baixo
+negativo: move para cima*/
+@keyframes topleft{
+    from{
+transform: translate(0,0);
+    }
+    to{
+        transform: translate(-10px,-30px);
+    }
+}
+@keyframes topright{
+    from{
+transform: translate(0,0);
+    }
+    to{
+        transform: translate(-20px,-10px);
+    }
+}
+.animation img:nth-child(1){
+    left: 0px;
+    bottom: 30px;
+    z-index: 4;
+    animation: topright 2s  infinite alternate ;
+    
+    width: 30%;
+}
+.animation img:nth-child(2){
+    right: 0;
+    top: 0;
+    z-index: 1;
+     width: 30%;
+    animation: topright 3s  infinite alternate-reverse ;
+}
+.animation img:nth-child(3){
+    
+    top: 60px;
+    z-index: 3;
+    width: 60%;
+    left: 140px;
+    animation: topleft 4s  infinite alternate ;
+}
+.animation img:nth-child(4){
+    right: 0;
+    bottom: 60px;
+    z-index: 4;
+    animation: topleft 2s  infinite alternate-reverse ;
+    width: 35%;
+}
+.animation img:nth-child(5){
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    animation: topleft 2s  infinite alternate-reverse ;
+    width: 35%;
+}
+.animation img:nth-child(6){
+    bottom: 0px;
+    left: 150px;
+    z-index: 5;
+    animation: topleft 2s  infinite alternate ;
+    width: 25%;
+}
