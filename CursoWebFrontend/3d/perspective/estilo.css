@@ -60,5 +60,6 @@ body{
      
 }
 #cena4 .plano{
-     transform: perspective(600px) rotateY(45deg);
+     transform: perspective(600px) rotateY(600deg);
+     backface-visibility: hidden; /*nessa rotaçao ele se esconde e so aparece quando mudamos a rotalai*/
 }
